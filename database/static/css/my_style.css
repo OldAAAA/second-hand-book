@@ -1,0 +1,11 @@
+
+.login-register {
+    color: #707bff;
+}
+
+.login-register:hover {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    padding-bottom: 3px;
+    color: #1834ff;
+}
