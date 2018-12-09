@@ -18,352 +18,1109 @@
     <table id="10" parent="2" name="django_content_type"/>
     <table id="11" parent="2" name="django_migrations"/>
     <table id="12" parent="2" name="django_session"/>
-    <table id="13" parent="2" name="second_book_server_user"/>
-    <table id="14" parent="2" name="sqlite_master">
+    <table id="13" parent="2" name="second_book_server_activity"/>
+    <table id="14" parent="2" name="second_book_server_activity_price"/>
+    <table id="15" parent="2" name="second_book_server_activity_price_activity_id"/>
+    <table id="16" parent="2" name="second_book_server_activity_price_goods_id"/>
+    <table id="17" parent="2" name="second_book_server_announcement"/>
+    <table id="18" parent="2" name="second_book_server_book"/>
+    <table id="19" parent="2" name="second_book_server_chat_record"/>
+    <table id="20" parent="2" name="second_book_server_coupon"/>
+    <table id="21" parent="2" name="second_book_server_favorites"/>
+    <table id="22" parent="2" name="second_book_server_goods"/>
+    <table id="23" parent="2" name="second_book_server_goods_book_id"/>
+    <table id="24" parent="2" name="second_book_server_goods_user_id"/>
+    <table id="25" parent="2" name="second_book_server_logininformation"/>
+    <table id="26" parent="2" name="second_book_server_ordersheet"/>
+    <table id="27" parent="2" name="second_book_server_shopping_cart"/>
+    <table id="28" parent="2" name="second_book_server_user"/>
+    <table id="29" parent="2" name="second_book_server_user_address"/>
+    <table id="30" parent="2" name="second_book_server_user_comment"/>
+    <table id="31" parent="2" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="15" parent="2" name="sqlite_sequence">
+    <table id="32" parent="2" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <column id="16" parent="6" name="id">
+    <column id="33" parent="6" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="17" parent="6" name="name">
+    <column id="34" parent="6" name="name">
       <Position>2</Position>
       <DataType>varchar(80)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="18" parent="6" name="sqlite_autoindex_auth_group_1">
+    <index id="35" parent="6" name="sqlite_autoindex_auth_group_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>name</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="19" parent="6">
+    <key id="36" parent="6">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="20" parent="6">
+    <key id="37" parent="6">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_auth_group_1</UnderlyingIndexName>
     </key>
-    <column id="21" parent="7" name="id">
+    <column id="38" parent="7" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="22" parent="7" name="group_id">
+    <column id="39" parent="7" name="group_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="23" parent="7" name="permission_id">
+    <column id="40" parent="7" name="permission_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="24" parent="7" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
+    <index id="41" parent="7" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
       <ColNames>group_id
 permission_id</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <index id="25" parent="7" name="auth_group_permissions_group_id_b120cbf9">
+    <index id="42" parent="7" name="auth_group_permissions_group_id_b120cbf9">
       <ColNames>group_id</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
-    <index id="26" parent="7" name="auth_group_permissions_permission_id_84c5c92e">
+    <index id="43" parent="7" name="auth_group_permissions_permission_id_84c5c92e">
       <ColNames>permission_id</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
-    <key id="27" parent="7">
+    <key id="44" parent="7">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="28" parent="7">
+    <foreign-key id="45" parent="7">
       <ColNames>group_id</ColNames>
       <RefTableName>auth_group</RefTableName>
       <RefColNames>id</RefColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
     </foreign-key>
-    <foreign-key id="29" parent="7">
+    <foreign-key id="46" parent="7">
       <ColNames>permission_id</ColNames>
       <RefTableName>auth_permission</RefTableName>
       <RefColNames>id</RefColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
     </foreign-key>
-    <column id="30" parent="8" name="id">
+    <column id="47" parent="8" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="31" parent="8" name="content_type_id">
+    <column id="48" parent="8" name="content_type_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="32" parent="8" name="codename">
+    <column id="49" parent="8" name="codename">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="33" parent="8" name="name">
+    <column id="50" parent="8" name="name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="34" parent="8" name="auth_permission_content_type_id_codename_01ab375a_uniq">
+    <index id="51" parent="8" name="auth_permission_content_type_id_codename_01ab375a_uniq">
       <ColNames>content_type_id
 codename</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <index id="35" parent="8" name="auth_permission_content_type_id_2f476e4b">
+    <index id="52" parent="8" name="auth_permission_content_type_id_2f476e4b">
       <ColNames>content_type_id</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
-    <key id="36" parent="8">
+    <key id="53" parent="8">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="37" parent="8">
+    <foreign-key id="54" parent="8">
       <ColNames>content_type_id</ColNames>
       <RefTableName>django_content_type</RefTableName>
       <RefColNames>id</RefColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
     </foreign-key>
-    <column id="38" parent="9" name="id">
+    <column id="55" parent="9" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="39" parent="9" name="action_time">
+    <column id="56" parent="9" name="action_time">
       <Position>2</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="9" name="object_id">
+    <column id="57" parent="9" name="object_id">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="41" parent="9" name="object_repr">
+    <column id="58" parent="9" name="object_repr">
       <Position>4</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="42" parent="9" name="change_message">
+    <column id="59" parent="9" name="change_message">
       <Position>5</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="43" parent="9" name="content_type_id">
+    <column id="60" parent="9" name="content_type_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
     </column>
-    <column id="44" parent="9" name="user_id">
+    <column id="61" parent="9" name="user_id">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="45" parent="9" name="action_flag">
+    <column id="62" parent="9" name="action_flag">
       <Position>8</Position>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="46" parent="9" name="django_admin_log_content_type_id_c4bce8eb">
+    <index id="63" parent="9" name="django_admin_log_content_type_id_c4bce8eb">
       <ColNames>content_type_id</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
-    <index id="47" parent="9" name="django_admin_log_user_id_c564eba6">
+    <index id="64" parent="9" name="django_admin_log_user_id_c564eba6">
       <ColNames>user_id</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
-    <key id="48" parent="9">
+    <key id="65" parent="9">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="49" parent="9">
+    <foreign-key id="66" parent="9">
       <ColNames>content_type_id</ColNames>
       <RefTableName>django_content_type</RefTableName>
       <RefColNames>id</RefColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
     </foreign-key>
-    <foreign-key id="50" parent="9">
+    <foreign-key id="67" parent="9">
       <ColNames>user_id</ColNames>
       <RefTableName>second_book_server_user</RefTableName>
       <RefColNames>id</RefColNames>
       <Deferrable>1</Deferrable>
       <InitiallyDeferred>1</InitiallyDeferred>
     </foreign-key>
-    <column id="51" parent="10" name="id">
+    <column id="68" parent="10" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="52" parent="10" name="app_label">
+    <column id="69" parent="10" name="app_label">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="10" name="model">
+    <column id="70" parent="10" name="model">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="54" parent="10" name="django_content_type_app_label_model_76bd3d3b_uniq">
+    <index id="71" parent="10" name="django_content_type_app_label_model_76bd3d3b_uniq">
       <ColNames>app_label
 model</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="55" parent="10">
+    <key id="72" parent="10">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="56" parent="11" name="id">
+    <column id="73" parent="11" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="57" parent="11" name="app">
+    <column id="74" parent="11" name="app">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="58" parent="11" name="name">
+    <column id="75" parent="11" name="name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="59" parent="11" name="applied">
+    <column id="76" parent="11" name="applied">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="60" parent="11">
+    <key id="77" parent="11">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="61" parent="12" name="session_key">
+    <column id="78" parent="12" name="session_key">
       <Position>1</Position>
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="62" parent="12" name="session_data">
+    <column id="79" parent="12" name="session_data">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="63" parent="12" name="expire_date">
+    <column id="80" parent="12" name="expire_date">
       <Position>3</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="64" parent="12" name="sqlite_autoindex_django_session_1">
+    <index id="81" parent="12" name="sqlite_autoindex_django_session_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>session_key</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <index id="65" parent="12" name="django_session_expire_date_a5c62663">
+    <index id="82" parent="12" name="django_session_expire_date_a5c62663">
       <ColNames>expire_date</ColNames>
       <ColumnCollations></ColumnCollations>
     </index>
-    <key id="66" parent="12">
+    <key id="83" parent="12">
       <ColNames>session_key</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_django_session_1</UnderlyingIndexName>
     </key>
-    <column id="67" parent="13" name="id">
+    <column id="84" parent="13" name="activity_id">
+      <Position>1</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="13" name="activity_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="86" parent="13" name="content">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="13" name="begin_time">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="88" parent="13" name="end_time">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="89" parent="13" name="sqlite_autoindex_second_book_server_activity_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>activity_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="90" parent="13">
+      <ColNames>activity_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_second_book_server_activity_1</UnderlyingIndexName>
+    </key>
+    <column id="91" parent="14" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="68" parent="13" name="password">
+    <column id="92" parent="14" name="price">
       <Position>2</Position>
-      <DataType>varchar(128)|0s</DataType>
+      <DataType>decimal|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="69" parent="13" name="last_login">
+    <key id="93" parent="14">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="94" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="95" parent="15" name="activity_price_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="15" name="activity_id">
       <Position>3</Position>
-      <DataType>datetime|0s</DataType>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="70" parent="13" name="email">
+    <index id="97" parent="15" name="second_book_server_activity_price_activity_id_activity_price_id_activity_id_1bec93e4_uniq">
+      <ColNames>activity_price_id
+activity_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="98" parent="15" name="second_book_server_activity_price_activity_id_activity_price_id_21bbc2e4">
+      <ColNames>activity_price_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="99" parent="15" name="second_book_server_activity_price_activity_id_activity_id_e4a7d747">
+      <ColNames>activity_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="100" parent="15">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="101" parent="15">
+      <ColNames>activity_price_id</ColNames>
+      <RefTableName>second_book_server_activity_price</RefTableName>
+      <RefColNames>id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <foreign-key id="102" parent="15">
+      <ColNames>activity_id</ColNames>
+      <RefTableName>second_book_server_activity</RefTableName>
+      <RefColNames>activity_id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <column id="103" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="104" parent="16" name="activity_price_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="105" parent="16" name="goods_id">
+      <Position>3</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="106" parent="16" name="second_book_server_activity_price_goods_id_activity_price_id_goods_id_6e222a5e_uniq">
+      <ColNames>activity_price_id
+goods_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="107" parent="16" name="second_book_server_activity_price_goods_id_activity_price_id_4019f40f">
+      <ColNames>activity_price_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="108" parent="16" name="second_book_server_activity_price_goods_id_goods_id_ec5bd0bf">
+      <ColNames>goods_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="109" parent="16">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="110" parent="16">
+      <ColNames>activity_price_id</ColNames>
+      <RefTableName>second_book_server_activity_price</RefTableName>
+      <RefColNames>id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <foreign-key id="111" parent="16">
+      <ColNames>goods_id</ColNames>
+      <RefTableName>second_book_server_goods</RefTableName>
+      <RefColNames>goods_id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <column id="112" parent="17" name="an_id">
+      <Position>1</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="113" parent="17" name="an_title">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="114" parent="17" name="an_content">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="115" parent="17" name="date">
       <Position>4</Position>
-      <DataType>varchar(254)|0s</DataType>
+      <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="71" parent="13" name="register_time">
+    <index id="116" parent="17" name="sqlite_autoindex_second_book_server_announcement_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>an_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="117" parent="17">
+      <ColNames>an_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_second_book_server_announcement_1</UnderlyingIndexName>
+    </key>
+    <column id="118" parent="18" name="bool_id">
+      <Position>1</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="119" parent="18" name="book_name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="120" parent="18" name="publish_time">
+      <Position>3</Position>
+      <DataType>date|0s</DataType>
+    </column>
+    <column id="121" parent="18" name="book_version">
+      <Position>4</Position>
+      <DataType>varchar(15)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="122" parent="18" name="author">
       <Position>5</Position>
-      <DataType>datetime|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>text|0s</DataType>
     </column>
-    <column id="72" parent="13" name="user_nickname">
+    <column id="123" parent="18" name="publish_house">
       <Position>6</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="73" parent="13" name="user_profile">
-      <Position>7</Position>
-      <DataType>text|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="74" parent="13" name="university">
-      <Position>8</Position>
+    <index id="124" parent="18" name="sqlite_autoindex_second_book_server_book_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>bool_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="125" parent="18" name="sqlite_autoindex_second_book_server_book_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>book_name</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="126" parent="18">
+      <ColNames>bool_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_second_book_server_book_1</UnderlyingIndexName>
+    </key>
+    <key id="127" parent="18">
+      <ColNames>book_name</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_second_book_server_book_2</UnderlyingIndexName>
+    </key>
+    <column id="128" parent="19" name="record_id">
+      <Position>1</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="75" parent="13" name="sqlite_autoindex_second_book_server_user_1">
+    <column id="129" parent="19" name="sender_id">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="130" parent="19" name="receiver_id">
+      <Position>3</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="131" parent="19" name="content">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="132" parent="19" name="date_time">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="133" parent="19" name="sqlite_autoindex_second_book_server_chat_record_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>record_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="134" parent="19">
+      <ColNames>record_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_second_book_server_chat_record_1</UnderlyingIndexName>
+    </key>
+    <column id="135" parent="20" name="Coupon_id">
+      <Position>1</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="136" parent="20" name="coupon_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="137" parent="20" name="credits">
+      <Position>3</Position>
+      <DataType>decimal|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="138" parent="20" name="begin_time">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="139" parent="20" name="end_time">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="140" parent="20" name="sqlite_autoindex_second_book_server_coupon_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Coupon_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="141" parent="20">
+      <ColNames>Coupon_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_second_book_server_coupon_1</UnderlyingIndexName>
+    </key>
+    <column id="142" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="143" parent="21" name="date">
+      <Position>2</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="144" parent="21" name="Label">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="145" parent="21" name="goods_id_id">
+      <Position>4</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="146" parent="21" name="user_id_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="147" parent="21" name="second_book_server_favorites_goods_id_id_195a352f">
+      <ColNames>goods_id_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="148" parent="21" name="second_book_server_favorites_user_id_id_8985b47e">
+      <ColNames>user_id_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="149" parent="21">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="150" parent="21">
+      <ColNames>goods_id_id</ColNames>
+      <RefTableName>second_book_server_goods</RefTableName>
+      <RefColNames>goods_id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <foreign-key id="151" parent="21">
+      <ColNames>user_id_id</ColNames>
+      <RefTableName>second_book_server_user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <column id="152" parent="22" name="goods_id">
+      <Position>1</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="153" parent="22" name="goods_time">
+      <Position>2</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="154" parent="22" name="goods_price">
+      <Position>3</Position>
+      <DataType>decimal|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="155" parent="22" name="introduction">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="156" parent="22" name="subject">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="157" parent="22" name="amount">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="158" parent="22" name="sqlite_autoindex_second_book_server_goods_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>goods_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <key id="159" parent="22">
+      <ColNames>goods_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_second_book_server_goods_1</UnderlyingIndexName>
+    </key>
+    <column id="160" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="161" parent="23" name="goods_id">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="162" parent="23" name="book_id">
+      <Position>3</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="163" parent="23" name="second_book_server_goods_book_id_goods_id_book_id_3fa540df_uniq">
+      <ColNames>goods_id
+book_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="164" parent="23" name="second_book_server_goods_book_id_goods_id_afad7fda">
+      <ColNames>goods_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="165" parent="23" name="second_book_server_goods_book_id_book_id_82a1afea">
+      <ColNames>book_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="166" parent="23">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="167" parent="23">
+      <ColNames>goods_id</ColNames>
+      <RefTableName>second_book_server_goods</RefTableName>
+      <RefColNames>goods_id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <foreign-key id="168" parent="23">
+      <ColNames>book_id</ColNames>
+      <RefTableName>second_book_server_book</RefTableName>
+      <RefColNames>bool_id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <column id="169" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="170" parent="24" name="goods_id">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="171" parent="24" name="user_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="172" parent="24" name="second_book_server_goods_user_id_goods_id_user_id_72adb09a_uniq">
+      <ColNames>goods_id
+user_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="173" parent="24" name="second_book_server_goods_user_id_goods_id_ddf82a13">
+      <ColNames>goods_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="174" parent="24" name="second_book_server_goods_user_id_user_id_7087fd68">
+      <ColNames>user_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="175" parent="24">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="176" parent="24">
+      <ColNames>goods_id</ColNames>
+      <RefTableName>second_book_server_goods</RefTableName>
+      <RefColNames>goods_id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <foreign-key id="177" parent="24">
+      <ColNames>user_id</ColNames>
+      <RefTableName>second_book_server_user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <column id="178" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="179" parent="25" name="log_time">
+      <Position>2</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="180" parent="25" name="log_ip">
+      <Position>3</Position>
+      <DataType>char(39)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="181" parent="25" name="log_outtime">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="182" parent="25" name="user_id_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="183" parent="25" name="second_book_server_logininformation_user_id_id_0c531c1e">
+      <ColNames>user_id_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="184" parent="25">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="185" parent="25">
+      <ColNames>user_id_id</ColNames>
+      <RefTableName>second_book_server_user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <column id="186" parent="26" name="order_id">
+      <Position>1</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="187" parent="26" name="buyer_id">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="188" parent="26" name="Seller_id">
+      <Position>3</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="189" parent="26" name="state">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="190" parent="26" name="is_paid">
+      <Position>5</Position>
+      <DataType>bool|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="191" parent="26" name="goods_id_id">
+      <Position>6</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="192" parent="26" name="sqlite_autoindex_second_book_server_ordersheet_1">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>order_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+      <Unique>1</Unique>
+    </index>
+    <index id="193" parent="26" name="second_book_server_ordersheet_goods_id_id_1be653a1">
+      <ColNames>goods_id_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="194" parent="26">
+      <ColNames>order_id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_second_book_server_ordersheet_1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="195" parent="26">
+      <ColNames>goods_id_id</ColNames>
+      <RefTableName>second_book_server_goods</RefTableName>
+      <RefColNames>goods_id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <column id="196" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="197" parent="27" name="date">
+      <Position>2</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="198" parent="27" name="amount">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="199" parent="27" name="goods_id_id">
+      <Position>4</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="200" parent="27" name="user_id_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="201" parent="27" name="second_book_server_shopping_cart_goods_id_id_307eb28e">
+      <ColNames>goods_id_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="202" parent="27" name="second_book_server_shopping_cart_user_id_id_4702fb23">
+      <ColNames>user_id_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="203" parent="27">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="204" parent="27">
+      <ColNames>goods_id_id</ColNames>
+      <RefTableName>second_book_server_goods</RefTableName>
+      <RefColNames>goods_id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <foreign-key id="205" parent="27">
+      <ColNames>user_id_id</ColNames>
+      <RefTableName>second_book_server_user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <column id="206" parent="28" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="207" parent="28" name="password">
+      <Position>2</Position>
+      <DataType>varchar(128)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="208" parent="28" name="last_login">
+      <Position>3</Position>
+      <DataType>datetime|0s</DataType>
+    </column>
+    <column id="209" parent="28" name="email">
+      <Position>4</Position>
+      <DataType>varchar(254)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="210" parent="28" name="register_time">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="211" parent="28" name="user_nickname">
+      <Position>6</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="212" parent="28" name="university">
+      <Position>7</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="213" parent="28" name="is_admin">
+      <Position>8</Position>
+      <DataType>bool|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="214" parent="28" name="user_is_active">
+      <Position>9</Position>
+      <DataType>bool|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="215" parent="28" name="user_profile">
+      <Position>10</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <index id="216" parent="28" name="sqlite_autoindex_second_book_server_user_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>email</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="76" parent="13">
+    <key id="217" parent="28">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="77" parent="13">
+    <key id="218" parent="28">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_second_book_server_user_1</UnderlyingIndexName>
     </key>
-    <column id="78" parent="14" name="type">
+    <column id="219" parent="29" name="id">
       <Position>1</Position>
-      <DataType>text|0s</DataType>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="79" parent="14" name="name">
+    <column id="220" parent="29" name="address_1">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="80" parent="14" name="tbl_name">
+    <column id="221" parent="29" name="address_2">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="81" parent="14" name="rootpage">
+    <column id="222" parent="29" name="address_3">
       <Position>4</Position>
-      <DataType>int|0s</DataType>
+      <DataType>text|0s</DataType>
     </column>
-    <column id="82" parent="14" name="sql">
+    <column id="223" parent="29" name="address_4">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="83" parent="15" name="name">
+    <column id="224" parent="29" name="address_5">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="225" parent="29" name="user_id_id">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="226" parent="29" name="second_book_server_user_address_user_id_id_839f683d">
+      <ColNames>user_id_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="227" parent="29">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="228" parent="29">
+      <ColNames>user_id_id</ColNames>
+      <RefTableName>second_book_server_user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <column id="229" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="230" parent="30" name="comment">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="231" parent="30" name="date">
+      <Position>3</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="232" parent="30" name="goods_id_id">
+      <Position>4</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="233" parent="30" name="user_id_id">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="234" parent="30" name="second_book_server_user_comment_goods_id_id_28336b82">
+      <ColNames>goods_id_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <index id="235" parent="30" name="second_book_server_user_comment_user_id_id_363c6bd5">
+      <ColNames>user_id_id</ColNames>
+      <ColumnCollations></ColumnCollations>
+    </index>
+    <key id="236" parent="30">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="237" parent="30">
+      <ColNames>goods_id_id</ColNames>
+      <RefTableName>second_book_server_goods</RefTableName>
+      <RefColNames>goods_id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <foreign-key id="238" parent="30">
+      <ColNames>user_id_id</ColNames>
+      <RefTableName>second_book_server_user</RefTableName>
+      <RefColNames>id</RefColNames>
+      <Deferrable>1</Deferrable>
+      <InitiallyDeferred>1</InitiallyDeferred>
+    </foreign-key>
+    <column id="239" parent="31" name="type">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="240" parent="31" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="241" parent="31" name="tbl_name">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="242" parent="31" name="rootpage">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="243" parent="31" name="sql">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+    </column>
+    <column id="244" parent="32" name="name">
       <Position>1</Position>
     </column>
-    <column id="84" parent="15" name="seq">
+    <column id="245" parent="32" name="seq">
       <Position>2</Position>
     </column>
   </database-model>
