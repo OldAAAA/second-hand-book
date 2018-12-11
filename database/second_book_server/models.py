@@ -101,7 +101,7 @@ class User_comment(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.TextField(default='系统默认好评')
     goods_id = models.ForeignKey(Goods, on_delete=models.CASCADE)
-    date = models.DateField(auto_now_add=True)
+    date = models.DateField()
 
 
 class Coupon(models.Model):
@@ -112,11 +112,17 @@ class Coupon(models.Model):
     end_time = models.DateField()
 
 
+#活动的详情的列表
 class Activity(models.Model):
+    #活动的id 由系统自动生成
     activity_id = models.CharField(max_length=30, primary_key=True)
+    #活动的名称由管理员发布时来决定
     activity_name = models.CharField(max_length=50)
+    #活动的内容
     content = models.TextField()
-    begin_time = models.DateField(auto_now_add=True)
+    #活动的开始时间
+    begin_time = models.DateField()
+    #活动的结束时间
     end_time = models.DateField()
 
 
@@ -130,4 +136,4 @@ class Announcement(models.Model):
     an_id = models.CharField(max_length=30, primary_key=True)
     an_title = models.CharField(max_length=50)
     an_content = models.TextField()
-    date = models.DateField(auto_now_add=True)
+    date = models.DateTimeField(auto_now_add=True)

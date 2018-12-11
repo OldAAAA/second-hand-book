@@ -1,11 +1,12 @@
+import json
+
 from django.contrib import auth
 from django.contrib.auth import authenticate
 from django.http import HttpResponse
 from django.shortcuts import render
-
-# Create your views here.
-from second_book_server.models import User
-
+from second_book_server.models import *
+from django.forms.models import model_to_dict
+from django.http import HttpResponse, JsonResponse
 
 def registe(request):
     if request.method == 'GET':
@@ -46,3 +47,41 @@ def index(request):
     if request.method == 'GET':
         return render(request,'index.html')
     return HttpResponse('OK')
+
+#活动的详情的战士页面的响应，请求包含活动名称，返回的时候根据特定的名称进行响应
+def activity(request):
+    if request.method == 'GET':
+        return render(request,'activity.html')
+    if request.method == 'POST':
+        activity_id = request.POST.get('activity_id')
+        resultObject = Activity.objects.get(activity_id= activity_id)
+        result = model_to_dict(resultObject)
+        return JsonResponse(result,safe=True)
+
+#公告的详情的界面响应，请求会返回所有的公告的内容
+def announcement(request):
+    if(request.method == 'GET'):
+        return render(request,"announcement.html")
+    if(request.method == 'POST'):
+        json_list = []
+        announcementObject = Announcement.objects.all()
+        for announcement in announcementObject:
+            json_data = model_to_dict(announcement)
+            json_list.append(json_data)
+        return JsonResponse(json_list,safe=False)
+
+#商品的详情界面响应，返回的商品的详细信息这个商品的评价信息
+def goods(request):
+    if(request.method == 'GET'):
+        return render(request,'goods.html')
+    if(request.method == 'POST'):
+        goods_id = request.POST['goods_id']
+        goodsObject = Goods.objects.get(goods_id = goods_id)
+        goodsResult = model_to_dict(goodsObject)
+        jsonlist = []
+        jsonlist.append(goodsResult)
+        commentObject = User_comment.objects.filter(goods_id=goods_id)
+        for comment in commentObject:
+            json_data = model_to_dict(comment)
+            jsonlist.append(json_data)
+        return JsonResponse(jsonlist, safe=False)
