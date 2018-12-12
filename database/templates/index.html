@@ -357,61 +357,13 @@
 						<p>你想知道的一切，都没有哦</p>
 						<img src="./static/style/custom/images/section-seprator.png" alt="section-seprator" />
 					</div><!-- Section Header /- -->
-					<div class="col-md-4 col-sm-6 col-xs-6">
-						<div class="type-post">
-							<div class="entry-cover">
-							</div>
-							<div class="blog-content">
-								<h3 class="entry-title"><a href="#" title="new Collectios are imported In Our shop."><b>寒潮蓝色预警继续发布：中东部地区气温仍持续偏低</b></a></h3>
-								<div class="entry-meta">
-									<span class="post-like"><i class="fa fa-book"></i>新闻资讯</span>
-									<span class="post-admin"><i class="fa fa-calendar-o"></i>2018/12/09</span>
-								</div>
-								<div class="entry-content">
-									<p>中新网12月9日电 据中央气象台网站消息，中央气象台12月9日06时继续发布寒潮蓝色预警：受强冷空气影响，预计9日至12日，我国中东部地区气温仍持续偏低。</p>
-									<a href="#" title="Read More" class="read-more">查看更多信息<i class="fa fa-long-arrow-right"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-xs-6">
-						<div class="type-post">
-							<div class="entry-cover">
-								<a href="#"><img src="./static/style/custom/images/blog-3.jpg" alt="blog"></a>
-							</div>
-							<div class="blog-content">
-								<h3 class="entry-title"><a href="#" title="buyers are saying it's good shop"><b>大猩猩的起源</b></a></h3>
-								<div class="entry-meta">
-									<span class="post-like"><i class="fa fa-book"></i>新闻资讯</span>
-									<span class="post-admin"><i class="fa fa-calendar-o"></i>2018/12/09</span>
-								</div>
-								<div class="entry-content">
-									<p>今日，我们平台有用户购书时意外遭到多只大猩猩的袭击，当他醒来时，突然洞悉了大猩猩的起源秘密......</p>
-									<a href="#" title="Read More" class="read-more">查看更多信息<i class="fa fa-long-arrow-right"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-xs-6">
-						<div class="type-post">
-							<div class="entry-cover">
-							</div>
-							<div class="blog-content">
-								<h3 class="entry-title"><a title="Best Solds in the this year was watches" href="#"><b>服务器维护公告</b></a></h3>
-								<div class="entry-meta">
-									<span class="post-like"><i class="fa fa-book"></i>平台公告</span>
-									<span class="post-admin"><i class="fa fa-calendar-o"></i>2018/12/09</span>
-								</div>
-								<div class="entry-content">
-									<p>平台将于2018年12月10日凌晨1点开始服务器后台升级，持续时间预计为5个小时，届时为用户带来的不便敬请谅解。</p>
-									<a href="#" title="Read More" class="read-more">查看更多信息<i class="fa fa-long-arrow-right"></i></a>
-								</div>
-							</div>
-						</div>
+					<div id = "announcement">
+						
 					</div>
 				</div><!-- Container /- -->
+				<div style="text-align: center;">
+					<a href="#" title="Read More" class="read-more">查看更多信息<i class="fa fa-long-arrow-right"></i></a>
+				</div>
 			</div><!-- Latest Blog /- -->
 			</div>
 		</main>
@@ -555,7 +507,6 @@
                 success: function (result) {
                     $('#all').empty();
                     var html = '';
-                    //遍历返回的数据，查看当前的在线人数
                     $.each(result, function (index, data) {
                         html +=
                         '<div class="listitem"><li class="product photography"><a href="#"><img src='+data.url+' alt="Product" /><h5>'+data.goods_name+'</h5><span class="price">￥'+data.goods_price+'</span></a><div class="wishlist-box"><a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a><a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a><a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a></div></li></div>'
@@ -566,6 +517,29 @@
                 }
             })
 		}
+
+		function getannouncement(){
+            $.ajax({
+                url: "http://127.0.0.1:8000/announcement",
+                type:"POST",
+                dataType: "json",
+                success: function (result) {
+                    $('#announcement').empty();
+                    var html = '';
+                    var count = 0;
+                    $.each(result, function (index, data) {
+                        html +=
+                        '<div class="col-md-4 col-sm-6 col-xs-6"><div class="type-post"><div class="entry-cover"></div><div class="blog-content"><h3 class="entry-title"><a href="#" title="new Collectios are imported In Our shop."><b>'+data.an_title+'</b></a></h3><div class="entry-meta"><span class="post-like"><i class="fa fa-book"></i>维护升级</span><span class="post-admin"><i class="fa fa-calendar-o"></i>'+data.date+'</span></div><div class="entry-content"><p>'+data.an_content+'</p></div></div></div></div>'
+							count++;
+							if(count == 3){
+								return false;
+							}
+                    });
+                    $('#announcement').html(html);
+                }
+            })
+		}
+		getannouncement();
 	</script>
 </body>
 </html>
