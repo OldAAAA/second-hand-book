@@ -1,0 +1,18 @@
+
+.book_info_list {
+    color: #727272;
+    margin-left: 1em;
+}
+
+li.book_info_list {
+    margin-top: 1em;
+}
+
+.my_text_center {
+    text-align: center;
+}
+
+.contact_us {
+    width: 100%;
+    position: center;
+}
