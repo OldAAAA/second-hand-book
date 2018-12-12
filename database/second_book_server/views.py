@@ -73,7 +73,8 @@ def announcement(request):
 #商品的详情界面响应，返回的商品的详细信息这个商品的评价信息
 def goods(request):
     if(request.method == 'GET'):
-        return render(request,'goods.html')
+        goods_id = request.GET.get("goods_id")
+        return render(request,'goods.html',{goods_id:goods_id})
     if(request.method == 'POST'):
         goods_id = request.POST['goods_id']
         goodsObject = Goods.objects.get(goods_id = goods_id)
