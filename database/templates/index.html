@@ -139,15 +139,17 @@
 							<p>保证是二手的！</p>
 							<img src="./static/images/section-seprator.png" alt="section-seprator" />
 						</div><!-- Section Header /- -->
-						<ul id="filters" class="products-categories no-left-padding">
-							<li><a data-filter="*" class="active" href="#">所有商品</a></li>
-							<li><a data-filter=".design" href="#">儿童</a></li>
-							<li><a data-filter=".video" href="#">科技</a></li>
-							<li><a data-filter=".photography" href="#">历史</a></li>
-							<li><a data-filter=".web" href="#">文学</a></li>
-							<li><a data-filter=".design" href="#">小说</a></li>
-							<li><a data-filter=".photography" href="#">语言交流</a></li>
-							<li><a data-filter=".video" href="#">更多<i class="fa fa-angle-down"></i></a></li>
+						<ul class="products-categories no-left-padding">
+							<li><a id = ""onclick="getlist(this)">所有商品</a></li>
+							<li><a  onclick="getlist(this)">基础学科</a></li>
+							<li><a  onclick="getlist(this)">语言</a></li>
+							<li><a  onclick="getlist(this)">计算机</a></li>
+							<li><a  onclick="getlist(this)">政治</a></li>
+							<li><a  onclick="getlist(this)">机电</a></li>
+							<li><a  onclick="getlist(this)">法律</a></li>
+							<li><a  onclick="getlist(this)">土木</a></li>
+							<li><a  onclick="getlist(this)">生活</a></li>
+							<li><a  onclick="getlist(this)">艺术</a></li>
 						</ul>
 						<div class="input-group">
 							<input class="form-control" placeholder="查找商品" type="text">
@@ -156,129 +158,144 @@
 							</span>
 						</div>
 						<!-- Products -->
-						<ul class="products">
+						<ul id = "all" class="products">
 							<!-- Product -->
-							<li class="product design">
-								<a href="#">
-									<img src="./static/images/product-1.jpg" alt="Product" />
-									<h5>Stylish Chair</h5>
-									<span class="price"><del>$200</del>$139</span>
-								</a>
-								<div class="wishlist-box">
-									<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
-									<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
-									<a href="#"><i class="fa fa-search" title="查找同类商品"></i></a>
-								</div>
-							</li><!-- Product /- -->
+							<div class="listitem">
+								<li class="product design">
+									<a href="#">
+										<img src="./static/images/product-1.jpg" alt="Product" />
+										<h5>Stylish Chair</h5>
+										<span class="price"><del>$200</del>$139</span>
+									</a>
+									<div class="wishlist-box">
+										<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
+										<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
+										<a href="#"><i class="fa fa-search" title="查找同类商品"></i></a>
+									</div>
+								</li>
+							</div>
+							<!-- Product /- -->
+							
+							<!-- Product -->
+							<div class="listitem">
+								<li class="product video">
+									<a href="#">
+										<img src="./static/images/product-2.jpg" alt="Product" />
+										<h5>men's casual shoes</h5>
+										<span class="price"><del>$150</del>$85</span>
+									</a>
+									<div class="wishlist-box">
+										<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
+										<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
+										<a href="#"><i class="fa fa-search" title="查找同类商品"></i></a>
+									</div>
+								</li>
+							</div>
+							<!-- Product /- -->
+							
 
 							<!-- Product -->
-							<li class="product video">
-								<a href="#">
-									<img src="./static/images/product-2.jpg" alt="Product" />
-									<h5>men's casual shoes</h5>
-									<span class="price"><del>$150</del>$85</span>
-								</a>
-								<div class="wishlist-box">
-									<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
-									<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
-									<a href="#"><i class="fa fa-search" title="查找同类商品"></i></a>
-								</div>
-							</li><!-- Product /- -->
+							<div class="listitem">
+								<li class="product photography">
+									<a href="#">
+										<img src="./static/images/product-3.jpg" alt="Product" />
+										<h5>Sun glass</h5>
+										<span class="price"><del>$100</del>$35</span>
+									</a>
+									<div class="wishlist-box">
+										<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
+										<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
+										<a href="#"><i class="fa fa-search" title="查找同类商品"></i></a>
+									</div>
+								</li>
+							</div>	
+							<!-- Product /- -->
 
 							<!-- Product -->
-							<li class="product photography">
-								<a href="#">
-									<img src="./static/images/product-3.jpg" alt="Product" />
-									<h5>Sun glass</h5>
-									<span class="price"><del>$100</del>$35</span>
-								</a>
-								<div class="wishlist-box">
-									<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
-									<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
-									<a href="#"><i class="fa fa-search" title="查找同类商品"></i></a>
-								</div>
-							</li><!-- Product /- -->
+							<div class="listitem">
+								<li class="product web">
+									<a href="#">
+										<img src="./static/images/product-4.jpg" alt="Product" />
+										<h5>tourist bags</h5>
+										<span class="price"><del>$350</del>$279</span>
+									</a>
+									<div class="wishlist-box">
+										<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
+										<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
+										<a href="#"><i class="fa fa-search" title="查找同类商品"></i></a>
+									</div>
+								</li>
+							</div>
+							<!-- Product /- -->
 
 							<!-- Product -->
-							<li class="product web">
-								<a href="#">
-									<img src="./static/images/product-4.jpg" alt="Product" />
-									<h5>tourist bags</h5>
-									<span class="price"><del>$350</del>$279</span>
-								</a>
-								<div class="wishlist-box">
-									<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
-									<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
-									<a href="#"><i class="fa fa-search" title="查找同类商品"></i></a>
-								</div>
-							</li><!-- Product /- -->
-
+							<div class="listitem">
+								<li class="product design">
+									<a href="#">
+										<img src="./static/images/product-5.jpg" alt="Product" />
+										<h5>mobile phone</h5>
+										<span class="price"><del>$450</del>$359</span>
+									</a>
+									<div class="wishlist-box">
+										<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
+										<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
+										<a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a>
+									</div>
+								</li>
+							</div>
+							<!-- Product /- -->
 							<!-- Product -->
-							<li class="product design">
-								<a href="#">
-									<img src="./static/images/product-5.jpg" alt="Product" />
-									<h5>mobile phone</h5>
-									<span class="price"><del>$450</del>$359</span>
-								</a>
-								<div class="wishlist-box">
-									<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
-									<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
-									<a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a>
-								</div>
-							</li><!-- Product /- -->
-
+							<div class="listitem">
+								<li class="product video">
+									<a href="#">
+										<img src="./static/images/product-6.jpg" alt="Product" />
+										<h5>men's winter coat</h5>
+										<span class="price"><del>$220</del>$129</span>
+									</a>
+									<div class="wishlist-box">
+										<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
+										<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
+										<a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a>
+									</div>
+								</li>
+							</div>
+							<!-- Product /- -->
 							<!-- Product -->
-							<li class="product video">
-								<a href="#">
-									<img src="./static/images/product-6.jpg" alt="Product" />
-									<h5>men's winter coat</h5>
-									<span class="price"><del>$220</del>$129</span>
-								</a>
-								<div class="wishlist-box">
-									<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
-									<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
-									<a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a>
-								</div>
-							</li><!-- Product /- -->
-
+							<div class="listitem">
+								<li class="product photography">
+									<a href="#">
+										<img src="./static/images/product-7.jpg" alt="Product" />
+										<h5>Model x12 computer</h5>
+										<span class="price"><del>$850</del>$550</span>
+									</a>
+									<div class="wishlist-box">
+										<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
+										<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
+										<a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a>
+									</div>
+								</li>
+							</div>
+							<!-- Product /- -->
 							<!-- Product -->
-							<li class="product photography">
-								<a href="#">
-									<img src="./static/images/product-7.jpg" alt="Product" />
-									<h5>Model x12 computer</h5>
-									<span class="price"><del>$850</del>$550</span>
-								</a>
-								<div class="wishlist-box">
-									<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
-									<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
-									<a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a>
-								</div>
-							</li><!-- Product /- -->
-
-							<!-- Product -->
-							<li class="product web">
-								<a href="#">
-									<img src="./static/images/product-8.jpg" alt="Product" />
-									<h5>Stylish headset</h5>
-									<span class="price"><del>$50</del>$29</span>
-								</a>
-								<div class="wishlist-box">
-									<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
-									<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
-									<a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a>
-								</div>
-							</li><!-- Product /- -->
+							<div class="listitem">
+								<li class="product web">
+									<a href="#">
+										<img src="./static/images/product-8.jpg" alt="Product" />
+										<h5>Stylish headset</h5>
+										<span class="price"><del>$50</del>$29</span>
+									</a>
+									<div class="wishlist-box">
+										<a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a>
+										<a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a>
+										<a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a>
+									</div>
+								</li>
+							</div>
+							<!-- Product /- -->
 						</ul><!-- Products /- -->
 					</div><!-- Row /- -->
-					<nav class="ow-pagination">
-						<ul class="pager">
-							<li class="number"><a href="#">1</a></li>
-							<li class="load-more"><a href="#">更多</a></li>
-							<li class="previous"><a href="#"><i class="fa fa-angle-right"></i></a></li>
-							<li class="next"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-						</ul>
-					</nav>
-				</div><!-- Container /- -->
+					<div id = "page" class="section-header">
+					</div><!-- Container /- -->
 			</div><!-- Product Section /- -->
 
 			<!-- Latest Blog -->
@@ -365,6 +382,98 @@
 	
 	<!-- JQuery v1.12.4 -->
 	<script src="./static/js/jquery.min.js"></script>
+	<script>
+		var pageall;
+		var pageno;
+		var pagesize;
+		var zz;
+		function getzz() {
+		    var a = $("ul#all div.listitem");
+		    var zz =new Array(a.length);
+		    for(var i=0;i <a.length;i++){
+		        zz[i]=a[i].innerHTML;
+		    } //div的字符串数组付给zz
+		    return zz;
+		}
+
+		function change(e){
+		   
+		    pageno=e;
+		    if(e<1){
+		        e=1;pageno=1;//就等于第1页 ， 当前页为1
+		    }
+		    if(e>pageall){  //如果输入页大于最大页
+		        e=pageall;pageno=pageall; //输入页和当前页都=最大页
+		    }
+		    $("#all").html("");//全部清空
+		    var html="";
+		    for(var i=0;i<pagesize;i++){
+		        html += zz[(e-1)*pagesize+i];//创建一页的li列表
+		        if(zz[(e-1)*pagesize+i+1]==null) break;//超出最后的范围跳出
+		    }
+		    $("ul#all").html(html);//给ul列表写入html
+		    var pageContent="";
+		    pageContent +='<a onClick="change(--pageno)">上一页</a>';
+		    pageContent +=' 第<span id=\"a2\">'+pageno+'</span> /';
+		    pageContent +='<span id="a1">'+pageall+'</span>页';
+		    pageContent +='<a onClick="change(++pageno)">下一页</a>';
+		    $("#page").html(pageContent);
+		}
+
+		function flashs(){
+			zz =getzz();
+		    pageno=1 ; //当前页
+		    pagesize=8; //每页多少条信息
+		    if(zz.length%pagesize==0){
+		        pageall =zz.length/pagesize ;
+		    }else{
+		        pageall =parseInt(zz.length/pagesize)+1;
+		    }   //一共多少页
+		    change(1);
+		}
+
+		flashs();
+		function first(){
+			$.ajax({
+                url: "http://127.0.0.1:8000/goods_list",
+                data: { type: "所有商品"},
+                dataType: "json",
+                success: function (result) {
+                    $('#all').empty();
+                    var html = '';
+                    //遍历返回的数据，查看当前的在线人数
+                    $.each(result, function (index, data) {
+                        html += 
+                        '<div class="listitem"><li class="product photography"><a href="#"><img src='+data.url+' alt="Product" /><h5>'+data.goods_name+'</h5><span class="price">￥'+data.goods_price+'</span></a><div class="wishlist-box"><a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a><a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a><a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a></div></li></div>'
+
+                    });
+                    $('#all').html(html);
+                    flashs();
+                }
+            })
+		}
+		first();
+		function getlist(data){
+            $.ajax({
+                url: "http://127.0.0.1:8000/goods_list",
+                data: { type: data.text},
+                dataType: "json",
+                success: function (result) {
+                    $('#all').empty();
+                    var html = '';
+                    //遍历返回的数据，查看当前的在线人数
+                    $.each(result, function (index, data) {
+                        html += 
+                        '<div class="listitem"><li class="product photography"><a href="#"><img src='+data.url+' alt="Product" /><h5>'+data.goods_name+'</h5><span class="price">￥'+data.goods_price+'</span></a><div class="wishlist-box"><a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a><a href="#"><i class="fa fa-heart-o" title="收藏商品"></i></a><a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a></div></li></div>'
+
+                    });
+                    $('#all').html(html);
+                    flashs();
+                }
+            })
+		}
+	</script>
+
 
 	<!-- Library - Js -->
 	<script src="./static/libraries/lib.js"></script>

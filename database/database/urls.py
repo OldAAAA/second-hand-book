@@ -24,5 +24,6 @@ urlpatterns = [
     path('',views.index),
     path('activity',views.activity),
     path('announcement',views.announcement),
-    path('goods',views.goods)
+    path('goods',views.goods),
+    path('goods_list',views.goods_list),
 ]

@@ -85,3 +85,18 @@ def goods(request):
             json_data = model_to_dict(comment)
             jsonlist.append(json_data)
         return JsonResponse(jsonlist, safe=False)
+
+def goods_list(request):
+    type = request.GET.get('type')
+    print(type)
+    if type == "所有商品":
+        listObject = Goods.objects.filter()
+    else:
+        listObject = Goods.objects.filter(subject=type)
+    jsonlist = []
+    for listitem in listObject:
+        json_data = model_to_dict(listitem)
+        jsonlist.append(json_data)
+    return JsonResponse(jsonlist, safe=False)
+
+

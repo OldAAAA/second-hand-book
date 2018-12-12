@@ -42,11 +42,13 @@ class Goods(models.Model):
     goods_id = models.CharField(max_length=30, primary_key=True)
     user_id = models.ManyToManyField(User)
     book_id = models.ManyToManyField(Book)
+    goods_name = models.CharField(max_length=40,default='')
     goods_time = models.DateField(null=False)
     goods_price = models.DecimalField(max_digits=10, decimal_places=2)
     introduction = models.TextField()
     subject = models.TextField()
     amount = models.IntegerField()
+    url = models.CharField(max_length=30,default='')
 
 
 #  关于登录时间有问题

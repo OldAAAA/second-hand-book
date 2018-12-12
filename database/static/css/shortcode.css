@@ -282,6 +282,7 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	padding-right: 12px;
+	cursor: pointer;
 }
 .product-section .products-categories li a::before {
 	content:"\f0c8";
