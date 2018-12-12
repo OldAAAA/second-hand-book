@@ -138,4 +138,4 @@ class Announcement(models.Model):
     an_id = models.CharField(max_length=30, primary_key=True)
     an_title = models.CharField(max_length=50)
     an_content = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.CharField(max_length=20)

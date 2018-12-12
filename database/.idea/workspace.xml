@@ -4,9 +4,10 @@
     <list default="true" id="56db31ee-e880-459e-8658-4fd5f8fea63b" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/static/goods/java核心技术.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/static/goods/医生.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/second_book_server/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/second_book_server/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/second_book_server/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/second_book_server/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,24 +51,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/urls.py">
+        <entry file="file://$PROJECT_DIR$/second_book_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+            <state relative-caret-position="301">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
               <folding>
-                <element signature="e#632#664#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/second_book_server/views.py">
+        <entry file="file://$PROJECT_DIR$/database/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="350">
+              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#632#664#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,11 +83,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_activity_price_goods_id">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_announcement">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/second_book_server/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="140" column="42" selection-start-line="140" selection-start-column="42" selection-end-line="140" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#71#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,31 +133,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_goods">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_user">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/second_book_server/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1750">
-              <caret line="44" column="48" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#71#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -176,14 +177,14 @@
         <option value="$PROJECT_DIR$/templates/register.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/css/my_style.css" />
-        <option value="$PROJECT_DIR$/second_book_server/models.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/database/urls.py" />
         <option value="$PROJECT_DIR$/second_book_server/views.py" />
+        <option value="$PROJECT_DIR$/second_book_server/models.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="202" />
     <option name="width" value="1175" />
     <option name="height" value="611" />
@@ -304,17 +305,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35554000" />
+    <option name="totallyTimeSpent" value="40337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24357034" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15692307" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30153847" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -323,14 +325,14 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.34" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.34" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.301059" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.24205749" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +409,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_activity_price" />
-    <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_announcement" />
     <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_book" />
     <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_favorites" />
     <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_coupon" />
@@ -464,26 +465,6 @@
     <entry file="file://$PROJECT_DIR$/second_book_server/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/second_book_server/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1750">
-          <caret line="44" column="48" selection-start-line="44" selection-start-column="48" selection-end-line="44" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-          <folding>
-            <element signature="e#632#664#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_goods">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -504,20 +485,20 @@
     <entry file="file://$PROJECT_DIR$/templates/announcement.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/second_book_server/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+          <folding>
+            <element signature="e#632#664#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -529,6 +510,33 @@
       </provider>
     </entry>
     <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_activity_price_goods_id">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/second_book_server/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/second_book_server/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="140" column="42" selection-start-line="140" selection-start-column="42" selection-end-line="140" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_announcement">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
