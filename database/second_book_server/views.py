@@ -86,6 +86,7 @@ def goods(request):
             jsonlist.append(json_data)
         return JsonResponse(jsonlist, safe=False)
 
+#商品的列表
 def goods_list(request):
     type = request.GET.get('type')
     print(type)
@@ -98,5 +99,6 @@ def goods_list(request):
         json_data = model_to_dict(listitem)
         jsonlist.append(json_data)
     return JsonResponse(jsonlist, safe=False)
+
 
 

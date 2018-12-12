@@ -40,8 +40,8 @@ class Book(models.Model):
 
 class Goods(models.Model):
     goods_id = models.CharField(max_length=30, primary_key=True)
-    user_id = models.ManyToManyField(User)
-    book_id = models.ManyToManyField(Book)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    book_id = models.ForeignKey(Book, on_delete=models.CASCADE)
     goods_name = models.CharField(max_length=40,default='')
     goods_time = models.DateField(null=False)
     goods_price = models.DecimalField(max_digits=10, decimal_places=2)
