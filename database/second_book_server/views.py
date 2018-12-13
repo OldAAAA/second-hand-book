@@ -75,9 +75,10 @@ def goods(request):
     if(request.method == 'GET'):
         goods_id = request.GET.get("goods_id")
         print(goods_id)
-        return render(request,'goods.html',{goods_id:goods_id})
+        return render(request,'goods.html',{"goods_id":goods_id})
     if(request.method == 'POST'):
         goods_id = request.POST['goods_id']
+        print(goods_id)
         goodsObject = Goods.objects.get(goods_id = goods_id)
         goodsResult = model_to_dict(goodsObject)
         jsonlist = []

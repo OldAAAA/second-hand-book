@@ -5,20 +5,7 @@
       <change afterPath="$PROJECT_DIR$/static/goods/java核心技术.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/static/goods/医生.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/second_book_server/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/second_book_server/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/activity/activity1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/activity/activity1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/activity/activity2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/activity/activity2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/activity/activity3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/activity/activity3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/activity/activity4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/activity/activity4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/activity/图片规格要求.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/activity/图片规格要求.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/java核心技术.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/java核心技术/java核心技术.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/医生.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/医生/医生.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/巴菲特之道.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/巴菲特之道/巴菲特之道.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/引爆社群.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/引爆社群/引爆社群.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/心理学与生活.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/心理学与生活/心理学与生活.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/经营.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/经营/经营.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/马云内部演讲.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/马云内部演讲/马云内部演讲.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/goods.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
@@ -63,14 +50,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/second_book_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
+            <state relative-caret-position="156">
+              <caret line="86" column="37" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7446">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
             </state>
           </provider>
         </entry>
@@ -120,33 +116,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/second_book_server/form.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/second_book_server/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1251">
-              <caret line="140" column="42" selection-start-line="140" selection-start-column="42" selection-end-line="140" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#71#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/second_book_server/tests.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_goods">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/goods.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1625" />
           </provider>
         </entry>
       </file>
@@ -188,8 +174,8 @@
         <option value="$PROJECT_DIR$/static/css/my_style.css" />
         <option value="$PROJECT_DIR$/second_book_server/models.py" />
         <option value="$PROJECT_DIR$/database/urls.py" />
-        <option value="$PROJECT_DIR$/second_book_server/views.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/second_book_server/views.py" />
       </list>
     </option>
   </component>
@@ -318,7 +304,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47264000" />
+    <option name="totallyTimeSpent" value="50823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -329,7 +315,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872504" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31384614" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31384614" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -345,7 +331,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.1096823" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.11119516" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,13 +430,6 @@
         <state relative-caret-position="-1039" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="69" column="42" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/my_style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -522,11 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/goods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1750" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -547,20 +521,32 @@
     <entry file="file://$PROJECT_DIR$/static/goods/java核心技术/java核心技术.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/second_book_server/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/goods.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1625" />
       </provider>
     </entry>
     <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_goods">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7446">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/second_book_server/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="86" column="37" selection-start-line="86" selection-start-column="37" selection-end-line="86" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -69,7 +69,7 @@
 
 <body class="ps-loading">
 <div class="header--sidebar"></div>
-<header id = "goods_id" class="header" value="{{goods_id}}">
+<header id = "goods" class="header" value="{{goods_id}}">
   <div class="header__top">
 	<div class="container-fluid">
 	  <div class="row">
@@ -393,16 +393,12 @@
 	<script >
 		$.ajax({
                 url: "http://127.0.0.1:8000/goods",
-                data:{goods_id:$(#goods_id).value()}
+                data:{goods_id:$('#goods').val()},
                 type:"POST",
                 dataType: "json",
                 success: function (result) {
                     $.each(result, function (index, data) {
-                    	if(index == 0){
-
-                    	}else{
-
-                    	}
+                    	console.log(data);
                     })
                 }
             })
