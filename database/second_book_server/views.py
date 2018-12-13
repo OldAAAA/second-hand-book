@@ -74,6 +74,7 @@ def announcement(request):
 def goods(request):
     if(request.method == 'GET'):
         goods_id = request.GET.get("goods_id")
+        print(goods_id)
         return render(request,'goods.html',{goods_id:goods_id})
     if(request.method == 'POST'):
         goods_id = request.POST['goods_id']

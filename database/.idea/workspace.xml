@@ -7,6 +7,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/second_book_server/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/second_book_server/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/activity/activity1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/activity/activity1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/activity/activity2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/activity/activity2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/activity/activity3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/activity/activity3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/activity/activity4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/activity/activity4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/activity/图片规格要求.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/activity/图片规格要求.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/java核心技术.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/java核心技术/java核心技术.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/医生.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/医生/医生.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/巴菲特之道.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/巴菲特之道/巴菲特之道.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/引爆社群.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/引爆社群/引爆社群.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/心理学与生活.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/心理学与生活/心理学与生活.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/经营.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/经营/经营.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style/custom/images/goods/马云内部演讲.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/goods/马云内部演讲/马云内部演讲.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/goods.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/goods.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
@@ -51,16 +63,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/second_book_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+              <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/goods/java核心技术/java核心技术.jpg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -99,11 +125,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/second_book_server/apps.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/second_book_server/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1251">
@@ -120,7 +141,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_goods">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -166,13 +187,13 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/css/my_style.css" />
         <option value="$PROJECT_DIR$/second_book_server/models.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/database/urls.py" />
         <option value="$PROJECT_DIR$/second_book_server/views.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="202" />
     <option name="width" value="1175" />
     <option name="height" value="611" />
@@ -209,19 +230,6 @@
             <path>
               <item name="database" type="b2602c69:ProjectViewProjectNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="database" type="b2602c69:ProjectViewProjectNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="database" type="b2602c69:ProjectViewProjectNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -246,7 +254,11 @@
       <recent name="D:\database\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\database\second_book_server" />
+      <recent name="C:\Users\16301\Documents\GitHub\DB_design\database\static\goods\马云内部演讲" />
+      <recent name="C:\Users\16301\Documents\GitHub\DB_design\database\static\goods\经营" />
+      <recent name="C:\Users\16301\Documents\GitHub\DB_design\database\static\goods\心理学与生活" />
+      <recent name="C:\Users\16301\Documents\GitHub\DB_design\database\static\goods\引爆社群" />
+      <recent name="C:\Users\16301\Documents\GitHub\DB_design\database\static\goods\巴菲特之道" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -306,13 +318,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44957000" />
+    <option name="totallyTimeSpent" value="47264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24357034" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24357034" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -333,16 +345,13 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.24659607" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.1096823" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/signup.html" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/apps/registry.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -378,13 +387,6 @@
     <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/auth_permission" />
     <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/auth_group" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/754ba3f2-9f33-42ed-9fb3-5d3c0945de75/console.sql" />
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1550">
-          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/second_book_server/test_models.py" />
     <entry file="file://$PROJECT_DIR$/database/settings.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -520,13 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_goods">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/goods.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1750" />
@@ -542,13 +537,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/goods/java核心技术/java核心技术.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/second_book_server/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+          <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://754ba3f2-9f33-42ed-9fb3-5d3c0945de75/schema/main/table/second_book_server_goods">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

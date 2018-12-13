@@ -69,7 +69,7 @@
 
 <body class="ps-loading">
 <div class="header--sidebar"></div>
-<header class="header" value="{{goods_id}}">
+<header id = "goods_id" class="header" value="{{goods_id}}">
   <div class="header__top">
 	<div class="container-fluid">
 	  <div class="row">
@@ -190,15 +190,15 @@
 				<option value="2">5</option>
 			  </select>
 			</div>
-			<h1>数据库系统 第五版</h1>
+			<h1 id = "goods_name">数据库系统 第五版</h1>
 			<h3 class="ps-product__price">￥ 115 <del>￥ 330</del></h3>
 			<div class="ps-product__block ps-product__quickview">
 			  <h4>书籍信息</h4>
 				<ul>
-					<li class="book_info_list">简介：（见商品详情）</li>
-					<li class="book_info_list">作者：<a> 王珊 / 萨师煊</a></li>
-					<li class="book_info_list">出版社：<a>高等教育出版社</a></li>
-					<li class="book_info_list">出版日期：<a>2014年9月</a></li>
+					<li  class="book_info_list">简介：（见商品详情）</li>
+					<li id = "goods_author" class="book_info_list">作者：<a> 王珊 / 萨师煊</a></li>
+					<li id = "goods_publisher" class="book_info_list">出版社：<a>高等教育出版社</a></li>
+					<li id = "goods_data" class="book_info_list">出版日期：<a>2014年9月</a></li>
 				</ul>
 			</div>
 			<div class="ps-product__block ps-product__size">
@@ -225,7 +225,7 @@
 			</ul>
 		  </div>
 		  <div class="tab-content mb-60">
-			<div class="tab-pane active" role="tabpanel" id="tab_01">
+			<div id = "goods_introduction" class="tab-pane active" role="tabpanel" id="tab_01">
 				<p>数据库系统概论（第5版）》是2014年出版的图书，作者是王珊、萨师煊。本书可以作为高等学校计算机类专业、信息管理与信息系统等相关专业数据库课程的教材。也可供从事数据库系统研究、开发和应用的研究人员和工程技术人员参考。</p>
 				<p>本书第1版于1983年出版，至今已修订至第5版。第5版被列入“十二五”普通高等教育本科国家级规划教材。相应课程于2004年被评为北京市精品课程，2005年被评为国家精品课程，2014年被批准为国家级精品资源共享课。</p>
 				<p>本书系统全面地阐述了数据库系统的基础理论、基本技术和基本方法。全书分为4篇16章。第一篇基础篇，包括绪论、关系数据库、关系数据库标准语言SQL、数据库安全性和数据库完整性，共5章；第二篇设计与应用开发篇，包括关系数据理论、数据库设计和数据库编程，共3章；第三篇系统篇，包括关系查询处理和查询优化、数据库恢复技术、并发控制和数据库管理系统，共4章；第四篇新技术篇，包括数据库技术发展概述、大数据管理、内存数据库系统和数据仓库与联机分析处理技术，共4章。</p>
@@ -297,7 +297,7 @@
 						<!--</div>-->
 					  <!--</div>-->
 				<!--</div>-->
-			  <!--</form>-->
+			  <!--</form>--> 
 			</div>
 			<div class="tab-pane" role="tabpanel" id="tab_03">
 				<h4>作者简介</h4>
@@ -390,6 +390,23 @@
 	<script type="text/javascript" src="./static/style/goods/plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 	<script type="text/javascript" src="./static/style/goods/plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
 	<!-- Custom scripts-->
+	<script >
+		$.ajax({
+                url: "http://127.0.0.1:8000/goods",
+                data:{goods_id:$(#goods_id).value()}
+                type:"POST",
+                dataType: "json",
+                success: function (result) {
+                    $.each(result, function (index, data) {
+                    	if(index == 0){
+
+                    	}else{
+
+                    	}
+                    })
+                }
+            })
+	</script>
 	<script type="text/javascript" src="./static/style/goods/js/main.js"></script>
 </body>
 </html>
