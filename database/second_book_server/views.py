@@ -1,8 +1,5 @@
-import json
-
 from django.contrib import auth
-from django.contrib.auth import authenticate
-from django.http import HttpResponse
+from django.contrib.auth import authenticate, get_user_model
 from django.shortcuts import render
 from second_book_server.models import *
 from django.forms.models import model_to_dict
@@ -74,18 +71,30 @@ def announcement(request):
 def goods(request):
     if(request.method == 'GET'):
         goods_id = request.GET.get("goods_id")
-        print(goods_id)
-        return render(request,'goods.html',{"goods_id":goods_id})
+        goodsObject = Goods.objects.get(goods_id=goods_id)
+        goodsResult = model_to_dict(goodsObject)
+        bookImage = {}
+        bookImage['iamge'] = "static/goods/"+goodsResult['goods_name']+"/"+goodsResult['goods_name']+".jpg"
+        bookImage['iamge1'] = "static/goods/" + goodsResult['goods_name'] + "/" + goodsResult['goods_name'] + "1.jpg"
+        bookImage['iamge2'] = "static/goods/" + goodsResult['goods_name'] + "/" + goodsResult['goods_name'] + "2.jpg"
+        return render(request,'goods.html',{"goods_id":goods_id,"bookImage":bookImage})
     if(request.method == 'POST'):
         goods_id = request.POST['goods_id']
         print(goods_id)
         goodsObject = Goods.objects.get(goods_id = goods_id)
         goodsResult = model_to_dict(goodsObject)
+        bookObject = Book.objects.get(bool_id= goodsResult['book_id'])
+        print(bookObject)
+        bookResult = model_to_dict(bookObject)
         jsonlist = []
         jsonlist.append(goodsResult)
+        jsonlist.append(bookResult)
         commentObject = User_comment.objects.filter(goods_id=goods_id)
         for comment in commentObject:
             json_data = model_to_dict(comment)
+            user = User.object.get(id = json_data['user_id'])
+            userResult = model_to_dict(user)
+            json_data['user_id'] = userResult['user_nickname']
             jsonlist.append(json_data)
         return JsonResponse(jsonlist, safe=False)
 

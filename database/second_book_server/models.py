@@ -32,9 +32,10 @@ class User(AbstractBaseUser):
 class Book(models.Model):
     bool_id = models.CharField(max_length=30, primary_key=True)
     book_name = models.TextField(unique=True)
-    publish_time = models.DateField(null=True)
+    publish_time = models.CharField(max_length=30,default="2018-12-12")
     book_version = models.CharField(max_length=15)
     author = models.TextField(null=True)
+    author_introduction = models.TextField(null=True)
     publish_house = models.CharField(max_length=30)
 
 
@@ -43,7 +44,7 @@ class Goods(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     book_id = models.ForeignKey(Book, on_delete=models.CASCADE)
     goods_name = models.CharField(max_length=40,default='')
-    goods_time = models.DateField(null=False)
+    goods_time = models.CharField(max_length=20,default='2018-12-12')
     goods_price = models.DecimalField(max_digits=10, decimal_places=2)
     introduction = models.TextField()
     subject = models.TextField()
@@ -103,8 +104,8 @@ class User_comment(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.TextField(default='系统默认好评')
     goods_id = models.ForeignKey(Goods, on_delete=models.CASCADE)
+    comment_rank = models.IntegerField(default= 5)
     date = models.DateField()
-
 
 class Coupon(models.Model):
     Coupon_id = models.CharField(max_length=30, primary_key=True)

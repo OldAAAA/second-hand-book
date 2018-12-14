@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
@@ -165,9 +165,9 @@
 		  <div class="ps-product__thumbnail">
 			<div class="ps-product__preview">
 			  <div class="ps-product__variants">
-				<div class="item"><img src="./static/style/goods/images/books/数据库1.jpg" alt=""></div>
-				<div class="item"><img src="./static/style/goods/images/books/数据库2.jpg" alt=""></div>
-				<div class="item"><img src="./static/style/goods/images/books/数据库3.jpg" alt=""></div>
+				<div class="item"><img src="{{bookImage.iamge}}" alt=""></div>
+				<div class="item"><img src="{{bookImage.iamge1}}" alt=""></div>
+				<div class="item"><img src="{{bookImage.iamge2}}" alt=""></div>
 			  </div>
 			</div>
 			<div class="ps-product__image">
@@ -191,7 +191,7 @@
 			  </select>
 			</div>
 			<h1 id = "goods_name">数据库系统 第五版</h1>
-			<h3 class="ps-product__price">￥ 115 <del>￥ 330</del></h3>
+			<h3 id = "goods_price" class="ps-product__price">￥ 115 <del>￥ 330</del></h3>
 			<div class="ps-product__block ps-product__quickview">
 			  <h4>书籍信息</h4>
 				<ul>
@@ -225,44 +225,16 @@
 			</ul>
 		  </div>
 		  <div class="tab-content mb-60">
-			<div id = "goods_introduction" class="tab-pane active" role="tabpanel" id="tab_01">
-				<p>数据库系统概论（第5版）》是2014年出版的图书，作者是王珊、萨师煊。本书可以作为高等学校计算机类专业、信息管理与信息系统等相关专业数据库课程的教材。也可供从事数据库系统研究、开发和应用的研究人员和工程技术人员参考。</p>
-				<p>本书第1版于1983年出版，至今已修订至第5版。第5版被列入“十二五”普通高等教育本科国家级规划教材。相应课程于2004年被评为北京市精品课程，2005年被评为国家精品课程，2014年被批准为国家级精品资源共享课。</p>
-				<p>本书系统全面地阐述了数据库系统的基础理论、基本技术和基本方法。全书分为4篇16章。第一篇基础篇，包括绪论、关系数据库、关系数据库标准语言SQL、数据库安全性和数据库完整性，共5章；第二篇设计与应用开发篇，包括关系数据理论、数据库设计和数据库编程，共3章；第三篇系统篇，包括关系查询处理和查询优化、数据库恢复技术、并发控制和数据库管理系统，共4章；第四篇新技术篇，包括数据库技术发展概述、大数据管理、内存数据库系统和数据仓库与联机分析处理技术，共4章。</p>
-				<p>本书可以作为高等学校计算机类专业、信息管理与信息系统等相关专业数据库课程的教材。也可供从事数据库系统研究、开发和应用的研究人员和工程技术人员参考。</p>
+			<div class="tab-pane active" role="tabpanel" id="tab_01">
+				<p id = "goods_introduction">数据库系统概论（第5版）》是2014年出版的图书，作者是王珊、萨师煊。本书可以作为高等学校计算机类专业、信息管理与信息系统等相关专业数据库课程的教材。也可供从事数据库系统研究、开发和应用的研究人员和工程技术人员参考。
+				本书第1版于1983年出版，至今已修订至第5版。第5版被列入“十二五”普通高等教育本科国家级规划教材。相应课程于2004年被评为北京市精品课程，2005年被评为国家精品课程，2014年被批准为国家级精品资源共享课。
+				本书系统全面地阐述了数据库系统的基础理论、基本技术和基本方法。全书分为4篇16章。第一篇基础篇，包括绪论、关系数据库、关系数据库标准语言SQL、数据库安全性和数据库完整性，共5章；第二篇设计与应用开发篇，包括关系数据理论、数据库设计和数据库编程，共3章；第三篇系统篇，包括关系查询处理和查询优化、数据库恢复技术、并发控制和数据库管理系统，共4章；第四篇新技术篇，包括数据库技术发展概述、大数据管理、内存数据库系统和数据仓库与联机分析处理技术，共4章。
+				本书可以作为高等学校计算机类专业、信息管理与信息系统等相关专业数据库课程的教材。也可供从事数据库系统研究、开发和应用的研究人员和工程技术人员参考。
+				</p>
 			</div>
 			<div class="tab-pane" role="tabpanel" id="tab_02">
-			  <div class="ps-review">
-				<div class="ps-review__thumbnail"><img src="./static/style/goods/images/user/1.jpg" alt=""></div>
-				<div class="ps-review__content">
-				  <header>
-					<select class="ps-rating">
-					  <option value="1">1</option>
-					  <option value="1">2</option>
-					  <option value="1">3</option>
-					  <option value="1">4</option>
-					  <option value="5">5</option>
-					</select>
-					<p><a href=""> 大猩猩的小猫</a> - 2018 / 12 / 12</p>
-				  </header>
-				   <p>不知道说什么…反正是看过了</p>
-				</div>
-			  </div>
-			  <div class="ps-review">
-				<div class="ps-review__thumbnail"><img src="./static/style/goods/images/slider/2.jpg" alt=""></div>
-				<div class="ps-review__content">
-				  <header>
-					<select class="ps-rating">
-					  <option value="1">1</option>
-					  <option value="1">2</option>
-					  <option value="1">3</option>
-					  <option value="1">4</option>
-					  <option value="5">5</option>
-					</select>
-					<p><a href=""> 小猩猩的大猫</a> - 2018 / 12 / 12</p>
-				  </header>
-				   <p>知道说什么…但是没看过...</p>
-				</div>
+			  <div id = 'comment'>
+			 	
 			  </div>
 			  <!--<form class="ps-product__review" action="_action" method="post">-->
 				<!--<h4>ADD YOUR REVIEW</h4>-->
@@ -299,10 +271,10 @@
 				<!--</div>-->
 			  <!--</form>--> 
 			</div>
-			<div class="tab-pane" role="tabpanel" id="tab_03">
+			<div  class="tab-pane" role="tabpanel" id="tab_03">
 				<h4>作者简介</h4>
 				<br>
-				<p>
+				<p id = "goods_author_introduction">
 王珊，中国人民大学教授、博士生导师。现任数据工程与知识工程教育部重点实验室学术委员会副主任。曾任中国人民大学信息学院院长，中国计算机学会副理事长。中国计算机学会数据库专委会主任．教育部第五届科学技术委员会委员等。
 
 自1981年以来一直从事数据库方向的教学、科研和系统开发工作。1984—1986年应邀赴美国马里兰大学工作．设计和开发可扩展的关系数据库管理系统×DB。回国后主持和承担了国家科技攻关项目、863高科技计划项目、北京市科技计划重大项目、国家自然科学基金重点及重大项目、国家核高基科技重大专项等50多项科研项目。在国内外杂志发表论文300余篇，出版数据库方面的著作30多部。
@@ -393,15 +365,54 @@
 	<script >
 		$.ajax({
                 url: "http://127.0.0.1:8000/goods",
-                data:{goods_id:$('#goods').val()},
+                data:{goods_id:$('#goods').attr('value')},
                 type:"POST",
                 dataType: "json",
                 success: function (result) {
+                	var count = 0;
+                	html = '';
                     $.each(result, function (index, data) {
-                    	console.log(data);
-                    })
+                    	if(count == 0){
+                    		$('#goods_name').text(data.goods_name);
+                    		$('#goods_price').text(data.goods_price);
+                    		$('#goods_introduction').text(data.introduction);
+                    	}else if(count == 1){
+                    		$('#goods_author').empty();
+                    		$('#goods_author').html('作者：<a>'+data.author+'</a>');
+                    		$('#goods_publisher').empty();
+                    		$('#goods_publisher').html('出版社：<a>'+data.publish_house+'</a>');
+                    		$('#goods_data').empty();
+                    		$('#goods_data').html('出版日期：<a>'+data.publish_time+'</a>');
+                    		$('#goods_author_introduction').empty();
+                    		$('#goods_author_introduction').html(data.author_introduction)
+                    	}else{
+                    		var rank = "";
+                    		for(var i = 0 ; i < 5 ; i ++){
+                    			if(i < data.comment_rank){
+                    				rank += '<a data-rating-value="1" data-rating-text="1" class="br-selected br-current"></a>'
+                    			}else{
+                    				rank +='<a data-rating-value="1" data-rating-text="5" class=""></a>'
+                    			}
+                    		}
+
+
+                    		html+=
+                    		'<div class="ps-review">'+
+								'<div class="ps-review__thumbnail"><img src="./static/style/goods/images/slider/2.jpg" alt=""></div>'+
+								'<div class="ps-review__content">'+
+								  '<header>'+
+									'<div class="br-wrapper br-theme-fontawesome-stars"><select class="ps-rating" style="display: none;"><option value="1">1</option><option value="1">2</option><option value="1">3</option><option value="1">4</option><option value="1">5</option></select><div class="br-widget">'+rank+'<div class="br-current-rating">1</div></div></div>'+
+									'<p><a href="">' +data.user_id+'</a>-'+data.date+'</p>'+
+								  '</header>'+
+								   '<p>'+data.comment+'</p>'+
+								'</div>'+
+							'</div>';
+                    	}
+                    	count++;
+                    });
+                    $('#comment').html(html);
                 }
-            })
+            });
 	</script>
 	<script type="text/javascript" src="./static/style/goods/js/main.js"></script>
 </body>
