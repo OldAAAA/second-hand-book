@@ -82,8 +82,8 @@
 			</div>
 			<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
 			  <div class="header__actions">
-				    <a href="#" style="color: #7290ff"><b>登录</b></a>
-				    <a href="#" style="color: #7290ff"><b>注册</b></a>
+				    <a href="log"><b>登录</b></a>
+				    <a href="registe"><b>注册</b></a>
 					<div class="btn-group ps-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">功能服务<i class="fa fa-angle-down"></i></a>
 					  <ul class="dropdown-menu my_text_center">
 						<li><a href="#" class=""><i class="fa fa-user"></i> 个人中心</a></li>
@@ -159,11 +159,11 @@
 			<h3 class="animated wow zoomIn" data-wow-delay=".5s">注册新账户</h3>
 			<div class="login-form-grids">
 				<h5 class="animated wow slideInUp" data-wow-delay=".5s">档案信息</h5>
-				<form class="animated wow slideInUp" data-wow-delay=".5s">
-					<input type="email" placeholder="请输入电子邮箱（必填）" required="required" >
-					<input type="text" placeholder="请输入您的昵称（选填）" >
-					<input type="text" placeholder="请输入您所在大学（必填）" required="required " >
-					<input type="password" placeholder="请输入密码" required="required " >
+				<form class="animated wow slideInUp" data-wow-delay=".5s" method="POST">
+					<input name = "email" type="email" placeholder="请输入电子邮箱（必填）" required="required" >
+					<input name = "nickname" type="text" placeholder="请输入您的昵称（选填）" >
+					<input name = "university" type="text" placeholder="请输入您所在大学（必填）" required="required " >
+					<input name = "password" type="password" placeholder="请输入密码" required="required " >
 					<input type="password" placeholder="请再次输入密码" required="required " >
 
 					<div class="register-check-box">

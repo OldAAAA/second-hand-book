@@ -18,8 +18,8 @@ from django.urls import path
 from second_book_server import views
 urlpatterns = [
     path('admin', admin.site.urls),
-    path('signup',views.registe),
-    path('login',views.login),
+    path('registe',views.registe),
+    path('log',views.login),
     path('index',views.index),
     path('',views.index),
     path('activity',views.activity),

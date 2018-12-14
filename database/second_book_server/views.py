@@ -28,8 +28,10 @@ def login(request):
         return render(request,'login.html')
     if request.method == 'POST':
         email = request.POST.get('email')
-        password = request.get('password')
+        password = request.POST.get('password')
+        print(email)
         is_user = User.object.filter(email = email)
+        print(is_user)
         if is_user:
             user = authenticate(email=email, password=password)
             if user is not None:
