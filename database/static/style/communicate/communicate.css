@@ -1,0 +1,84 @@
+#namecard {
+    position: relative;
+    height: 50%;
+    min-height: 300px;
+    text-align: center;
+    padding: 15px;
+    margin: 0px;
+    margin-bottom: 0px;
+    margin-bottom: 15px;
+    background: #00BCD4;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 860px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.rightDiv {
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    background: #fff;
+    background-clip: border-box;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    height: 550px;
+}
+
+.recv_message {
+    width: 100%;
+    display: flex;
+    float: left;
+}
+
+.send_message {
+    float: right;
+    width: 100%;
+    display: block;
+}
+
+.columns {
+    height: 500px;
+    display: block;
+    overflow: auto;
+    overflow-y: auto;
+}
+
+.messageBox_right {
+    float: right;
+    background-color: blanchedalmond;
+}
+
+.user_list {
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    background-color: antiquewhite;
+    background-clip: border-box;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    display: block;
+}
+
+.contacts_list {
+    height: 460px;
+    overflow: auto;
+    overflow-y: auto;
+    display: block;
+}
