@@ -448,6 +448,7 @@
               dataType: "json",
               success: repos => {
                   $("#user_list").html(parseUserListData(repos.data));
+                  setClickListener(repos.data);
               },
               error: repos => {
                   $("#user_list").html("无法加载用户列表，请刷新重试");
@@ -519,14 +520,42 @@
                       "<td>" + data[i].university + "</td>" +
                       "<td>" + data[i].register_time + "</td>" +
                       "<td>" + data[i].last_login + "</td>" +
-                      "<td class=\"text-danger\"><a class=\"operation\" onclick=\"showl()\">修改</a>/<a class=\"operation\">删除</a></td>" +
+                      "<td class=\"text-danger\"><a id='" + data[i].username +"_update'class=\"operation\">" +
+                        "修改</a>/<a class=\"operation\" id='" + data[i].username + "_delete'>删除</a></td>" +
                       "</tr>";
           }
           return content;
       }
 
-      function showl() {
-          alert("23")
+      /**
+       * 设置监听器
+       **/
+      function setClickListener(data) {
+          for (let i = 0; i < data.length; i++) {
+              let delete_id = data[i].username + "_delete";
+              $("#" + delete_id).on("click", _=> {
+                  deleteUser(delete_id);
+              })
+          }
+      }
+
+      /**
+       * 删除用户
+       * @param username
+       */
+      function deleteUser(username) {
+          $.ajax({
+              url: "/admin_user_delete",
+              type: "POST",
+              data: {"username": username},
+              dataType: "json",
+              success: repos => {
+                  $("#search_hint").html("删除成功！");
+              },
+              error: repos => {
+                  $("#search_hint").html("删除失败！")
+              }
+          })
       }
   </script>
   <!-- container-scroller -->
