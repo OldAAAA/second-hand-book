@@ -334,10 +334,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 grid-margin stretch-card">
+            <div class="col-lg-12 stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">活动管理</h4>
+                    <div class="input-group">
+                        <h4 class="card-title">活动管理</h4>
+                        <div id="delete_msg" style="margin-left: 2em; color: #c90000"></div>
+                    </div>
                     <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -442,13 +445,37 @@
                                   "<td>" + repos[i].activity_price + "</td>" +
                                   "<td>" + repos[i].activity_start_time + "</td>" +
                                   "<td>" + repos[i].activity_end_time + "</td>" +
-                                  "<td>删除</td>" +
+                                  "<td><span class=\"operation\" id='" + repos[i].activity_id + "_delete'> 删除</span></td>" +
                                   "</tr>";
                   }
                   $("#activity_list").html(content);
+                  for (let i = 0; i < repos.length; i++) {
+                      $("#" + repos[i].activity_id + "_delete").on("click", _=> {
+                          deleteActivity(repos[i].activity_id);
+                      })
+                  }
               },
               error: repos => {
                   showErrorMessage("当前尚未发布活动");
+              }
+          })
+      }
+
+      /**
+       * 删除公告
+       * @param activity_id
+       */
+      function deleteActivity(activity_id) {
+          $.ajax({
+              url: "/admin_activity_delete",
+              type: "POST",
+              dataType: "json",
+              data: {"activity_id": activity_id},
+              success: repos => {
+                  $("#delete_msg").html("【删除" + activity_id + "成功！】");
+              },
+              error: repos => {
+                  $("#delete_msg").html("【删除" + activity_id + "失败！】");
               }
           })
       }
