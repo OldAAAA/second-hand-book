@@ -87,19 +87,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<script>
 		$(function () {
 			$('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
-
 			if (!screenfull.enabled) {
 				return false;
 			}
-
-
-
 			$('#toggle').click(function () {
 				screenfull.toggle($('#container')[0]);
 			});
-
-
-
 		});
 		</script>
 
@@ -286,20 +279,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 					 <li>
-                        <a href="myorder.html" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的订单</span> </a>
+                        <a href="myorder" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的订单</span> </a>
                     </li>
 					<li>
-                        <a href="mycoupon.html" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的优惠券</span> </a>
+                        <a href="mycoupon" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的优惠券</span> </a>
                     </li>
 
                     <li>
-                        <a href="mygoods.html" class=" hvr-bounce-to-right"><i class="fa fa-picture-o nav_icon"></i> <span class="nav-label">我的商品</span> </a>
+                        <a href="mygoods" class=" hvr-bounce-to-right"><i class="fa fa-picture-o nav_icon"></i> <span class="nav-label">我的商品</span> </a>
                     </li>
 
 
 
-                            <li><a href="profile.html" class=" hvr-bounce-to-right"><i class="fa fa-align-left nav_icon"></i>我的信息</a></li>
-                            <li><a href="validation.html" class=" hvr-bounce-to-right"><i class="fa fa-check-square-o nav_icon"></i>修改信息</a></li>
+                            <li><a href="profile" class=" hvr-bounce-to-right"><i class="fa fa-align-left nav_icon"></i>我的信息</a></li>
+                            <li><a href="validation" class=" hvr-bounce-to-right"><i class="fa fa-check-square-o nav_icon"></i>修改信息</a></li>
 
 
                 </ul>
@@ -325,32 +318,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  		<div class="validation-form">
  	<!---->
 
-        <form>
+        <form action = "validation" method="POST">
          	<div class="vali-form">
             <div class="col-md-6 form-group1">
               <label class="control-label">昵称</label>
-              <input type="text" placeholder="请输入昵称" required="">
+              <input id = "nickname" type="text" placeholder="请输入昵称" required="">
             </div>
             <div class="clearfix"> </div>
             </div>
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">电子邮箱</label>
-              <input type="text" placeholder="请输入电子邮箱" required="">
+              <input id = "email"type="text" placeholder="请输入电子邮箱" required="">
             </div>
              <div class="clearfix"> </div>
             <div class="col-md-12 form-group1 group-mail">
               <label class="control-label">在读大学</label>
-              <input type="text" placeholder="请输入在读大学" required="">
+              <input id = "unniversity" type="text" placeholder="请输入在读大学" required="">
             </div>
             <div class="col-md-12 form-group1 ">
               <label class="control-label">个性签名</label>
-              <textarea  placeholder="请输入你的签名" required=""></textarea>
+              <textarea id = "profile" placeholder="请输入你的签名" required=""></textarea>
             </div>
              <div class="clearfix"> </div>
              <div class="vali-form vali-form1">
             <div class="col-md-6 form-group1">
               <label class="control-label">新密码</label>
-              <input type="password" placeholder="请输入新密码" required="">
+              <input id = "password" type="password" placeholder="请输入新密码" required="">
             </div>
             <div class="col-md-6 form-group1 form-last">
               <label class="control-label">再次确认</label>
@@ -358,14 +351,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="clearfix"> </div>
             </div>
-
+        </form>
             <div class="col-md-12 form-group">
-              <button type="submit" class="btn btn-primary">提交</button>
+              <button type = "button" onclick = "submits()" class="btn btn-primary">提交</button>
               <button type="reset" class="btn btn-default">重置</button>
             </div>
           <div class="clearfix"> </div>
-        </form>
-
  	<!---->
  </div>
 
@@ -393,6 +384,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<!-- goods js -->
 	<script type="text/javascript" src="./static/style/goods/plugins/jquery/dist/jquery.min.js"></script>
+    <script>
+        function submits(){
+            debugger
+        	data = {nickname:$('#nickname').val(),email:$('#email').val(),unniversity:$('#unniversity').val(),profile:$('#profile').val(),password:$('#password').val()};
+            console.log(data)
+        	$.ajax({
+                url: "/validation",
+                data:data,
+                type:"POST",
+                dataType: "json",
+                success: function (result) {
+                    alert("修改成功")
+                }
+            });
+        }
+    </script>
 	<script type="text/javascript" src="./static/style/goods/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./static/style/goods/plugins/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
 	<script type="text/javascript" src="./static/style/goods/plugins/owl-carousel/owl.carousel.min.js"></script>

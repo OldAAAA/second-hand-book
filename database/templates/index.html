@@ -79,16 +79,21 @@
 			</div>
 			<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
 			  <div class="header__actions">
+                  {%if is_auth == "True"%}
+                        <a>{{ username }}</a>
+                  {% else %}
+                      <a href="log"><b>登录</b></a>
+				        <a href="registe"><b>注册</b></a>
+                  {%endif %}
+                  <!--
+                    <a>用户001</a>
 				    <a href="log"><b>登录</b></a>
 				    <a href="registe"><b>注册</b></a>
+				    -->
 					<div class="btn-group ps-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">功能服务<i class="fa fa-angle-down"></i></a>
 					  <ul class="dropdown-menu my_text_center">
-						<li><a href="#" class=""><i class="fa fa-user"></i> 个人中心</a></li>
-						<li><a href="#" class=""><i class="fa fa-shopping-cart"></i> 购物车</a></li>
-						<li><a href="#"><i class="fa fa-heart"></i> 我的收藏</a></li>
-						<li><a href="#"><i class="fa fa-book"></i> 我的订单</a></li>
-						<li><a href="publish.html"><i class="fa fa-upload"></i> 发布商品</a></li>
-						<li><a href="#"><i class="fa fa-power-off"></i> 退出登录</a></li>
+						<li><a href="myorder" class=""><i class="fa fa-user"></i> 个人中心</a></li>
+						<li><a href="logout"><i class="fa fa-power-off"></i> 退出登录</a></li>
 					  </ul>
 					</div>
 			  </div>
@@ -103,9 +108,9 @@
 	  </div>
 	  <div class="navigation__column center">
 		<ul class="main-menu menu">
-		  <li class="menu-item menu-item-has-children"><a href="index.html">主页</a></li>
+		  <li class="menu-item menu-item-has-children"><a href="index">主页</a></li>
 		  <li class="menu-item menu-item-has-children has-mega-menu"><a href="#">购物车</a></li>
-		  <li class="menu-item"><a href="#">用户中心</a></li>
+		  <li class="menu-item"><a href="myorder">用户中心</a></li>
 		  <li class="menu-item"><a href="#">联系我们</a></li>
 		</ul>
 	  </div>
@@ -397,7 +402,7 @@
                     var count = 0;
                     $.each(result, function (index, data) {
                         html +=
-                        '<div class="col-md-4 col-sm-6 col-xs-6"><div class="type-post"><div class="entry-cover"></div><div class="blog-content"><h3 class="entry-title"><a href="#" title="new Collectios are imported In Our shop."><b>'+data.an_title+'</b></a></h3><div class="entry-meta"><span class="post-like"><i class="fa fa-book"></i>维护升级</span><span class="post-admin"><i class="fa fa-calendar-o"></i>'+data.date+'</span></div><div class="entry-content"><p>'+data.an_content+'</p></div></div></div></div>'
+                        '<div class="col-md-4 col-sm-6 col-xs-6"><div class="type-post"><div class="entry-cover"></div><div class="blog-content"><h3 class="entry-title"><a href="#" title="new Collectios are imported In Our shop."><b>'+data.an_title+'</b></a></h3><div class="entry-meta"><span class="post-like"><i class="fa fa-book"></i>'+data.type+'</span><span class="post-admin"><i class="fa fa-calendar-o"></i>'+data.date+'</span></div><div class="entry-content"><p>'+data.an_content+'</p></div></div></div></div>'
 							count++;
 							if(count == 3){
 								return false;

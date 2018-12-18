@@ -287,19 +287,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 					 <li>
-                        <a href="myorder.html" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的订单</span> </a>
+                        <a href="myorder" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的订单</span> </a>
                     </li>
 					<li>
-                        <a href="mycoupon.html" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的优惠券</span> </a>
+                        <a href="mycoupon" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的优惠券</span> </a>
                     </li>
 
                     <li>
-                        <a href="mygoods.html" class=" hvr-bounce-to-right"><i class="fa fa-picture-o nav_icon"></i> <span class="nav-label">我的商品</span> </a>
+                        <a href="mygoods" class=" hvr-bounce-to-right"><i class="fa fa-picture-o nav_icon"></i> <span class="nav-label">我的商品</span> </a>
                     </li>
 
 
-                            <li><a href="profile.html" class=" hvr-bounce-to-right"><i class="fa fa-align-left nav_icon"></i>我的信息</a></li>
-                            <li><a href="validation.html" class=" hvr-bounce-to-right"><i class="fa fa-check-square-o nav_icon"></i>修改信息</a></li>
+                    <li><a href="profile" class=" hvr-bounce-to-right"><i class="fa fa-align-left nav_icon"></i>我的信息</a></li>
+                    <li><a href="validation" class=" hvr-bounce-to-right"><i class="fa fa-check-square-o nav_icon"></i>修改信息</a></li>
 
 
                 </ul>
@@ -362,67 +362,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                </div>
                 <table class="table">
                     <tbody>
-                        <tr class="table-row">
+                        {% for item in items %}
+                            <tr class="table-row">
                             <td class="table-img">
-                               <img src="./static/style/profile/images/in.jpg" alt="" />
+                               <img src="{{ item.url }}"  width="50px" height="50px" alt="" />
                             </td>
                             <td class="table-text">
-                            	<h6> 数据库</h6>
-                                <p>第五版，人教出版社</p>
+                            	<h6> {{ item.goods_name }}</h6>
+                                <p>{{ item.version }} {{ item.publish_house }}</p>
                             </td>
                             <td>
-                            	<span class="fam">计算机</span>
+                            	<span class="fam">{{ item.type }}</span>
                             </td>
                             <td class="march">
-                               07-18购买
+                               {{ item.date }}
                             </td>
-
+                            <td class="march">
+                               {{ item.order_id }}
+                            </td>
+                                <td class="march">
+                               {{ item.final_price }}
+                            </td>
+                                <td class="march">
+                               {{ item.state }}
+                            </td>
                              <td >
 							 <i class="fa fa-star-half-o icon-state-warning"></i>
 
                             </td>
                         </tr>
-                        <tr class="table-row">
-                            <td class="table-img">
-                               <img src="./static/style/profile/images/in.jpg" alt="" />
-                            </td>
-                            <td class="table-text">
-                            	<h6> 数据库</h6>
-                                <p>第五版，人教出版社</p>
-                            </td>
-                            <td>
-                            	<span class="fam">计算机</span>
-                            </td>
-                            <td class="march">
-                               07-18购买
-                            </td>
-
-                             <td >
-							 <i class="fa fa-star-half-o icon-state-warning"></i>
-
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="table-img">
-                               <img src="./static/style/profile/images/in.jpg" alt="" />
-                            </td>
-                            <td class="table-text">
-                            	<h6> 数据库</h6>
-                                <p>第五版，人教出版社</p>
-                            </td>
-                            <td>
-                            	<span class="fam">计算机</span>
-                            </td>
-                            <td class="march">
-                               07-18购买
-                            </td>
-
-                             <td >
-							 <i class="fa fa-star-half-o icon-state-warning"></i>
-
-                            </td>
-                        </tr>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
                </div>

@@ -288,19 +288,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 					 <li>
-                        <a href="myorder.html" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的订单</span> </a>
+                        <a href="myorder" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的订单</span> </a>
                     </li>
 					<li>
-                        <a href="mycoupon.html" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的优惠券</span> </a>
+                        <a href="mycoupon" class=" hvr-bounce-to-right"><i class="fa fa-inbox nav_icon"></i> <span class="nav-label">我的优惠券</span> </a>
                     </li>
 
                     <li>
-                        <a href="mygoods.html" class=" hvr-bounce-to-right"><i class="fa fa-picture-o nav_icon"></i> <span class="nav-label">我的商品</span> </a>
+                        <a href="mygoods" class=" hvr-bounce-to-right"><i class="fa fa-picture-o nav_icon"></i> <span class="nav-label">我的商品</span> </a>
                     </li>
 
 
-                            <li><a href="profile.html" class=" hvr-bounce-to-right"><i class="fa fa-align-left nav_icon"></i>我的信息</a></li>
-                            <li><a href="validation.html" class=" hvr-bounce-to-right"><i class="fa fa-check-square-o nav_icon"></i>修改信息</a></li>
+                    <li><a href="profile" class=" hvr-bounce-to-right"><i class="fa fa-align-left nav_icon"></i>我的信息</a></li>
+                    <li><a href="validation" class=" hvr-bounce-to-right"><i class="fa fa-check-square-o nav_icon"></i>修改信息</a></li>
 
 
                 </ul>
@@ -363,43 +363,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                </div>
                 <table class="table">
                     <tbody>
-                        <tr class="table-row">
-                            <td class="table-img">
-                               <img src="./static/style/profile/images/in.jpg" alt="" />
-                            </td>
-                            <td class="table-text">
-                            	<h6> 五元优惠券</h6>
-                                <p>满35元使用</p>
-                            </td>
-                            <td class="march">
-                               07-18到期
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="table-img">
-                               <img src="./static/style/profile/images/in.jpg" alt="" />
-                            </td>
-                            <td class="table-text">
-                            	<h6> 五元优惠券</h6>
-                                <p>满35元使用</p>
-                            </td>
-                            <td class="march">
-                               07-18到期
-                            </td>
-                        </tr>
-                        <tr class="table-row">
-                            <td class="table-img">
-                               <img src="./static/style/profile/images/in.jpg" alt="" />
-                            </td>
-                            <td class="table-text">
-                            	<h6> 五元优惠券</h6>
-                                <p>满35元使用</p>
-                            </td>
-                            <td class="march">
-                               07-18到期
-                            </td>
-                        </tr>
-                        </tr>
+                        {% for item in result %}
+                            <tr class="table-row">
+                                <td class="table-img">
+                                   <img src="./static/style/profile/images/in.jpg" alt="" />
+                                </td>
+                                <td class="table-text">
+                                    <h6> {{ item.name}}</h6>
+                                </td>
+                                <td class="march">
+                                   {{ item.end_time }}
+                                </td>
+                                <td class="march">
+                                   {{ item.amount }}
+                                </td>
+                            </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
                </div>

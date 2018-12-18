@@ -150,7 +150,7 @@
   <div class="test">
 
 	<div class="form_content">
-    <form id="test" action="#" method="get">
+    <form id="test" action="myorder" method="get">
     <fieldset>
         <legend>收货人信息</legend>
         <div class="form-row">
@@ -165,7 +165,7 @@
 
         <div class="form-row">
             <div class="field-label"><label for="field3">留言备注</label>:</div>
-            <div class="field-widget"><textarea class="required"></textarea></div>
+            <div class="field-widget"><textarea id = "field3"class="required"></textarea></div>
         </div>
 
 
@@ -174,24 +174,24 @@
         <legend>订单详情</legend>
 
         <div class="form-row">
-            <div class="field-label"><label for="field4">订单流水号</label>:</div>
-            <div class="field-widget"><span name="field4" id="field4">0000000000000</span></div>
+            <div class="field-label"><label for="field4">货品编号</label>:</div>
+            <div class="field-widget"><span name="field4" id="field4">{{ goods_id }}</span></div>
         </div>
 
         <div class="form-row">
             <div class="field-label"><label for="field5">卖家ID</label>:</div>
-            <div class="field-widget"><span name="field5" id="field5">9999999999999</span></div>
+            <div class="field-widget"><span name="field5" id="field5">{{ seller_id }}</span></div>
         </div>
 
         <div class="form-row">
             <div class="field-label"><label for="field6">收货地址</label>:</div>
             <div class="field-widget">
                 <select id="field6" name="field6" class="validate-selection" title="Choose your department">
-                    <option>常用地址01</option>
-                    <option>常用地址02</option>
-                    <option>常用地址03</option>
-                    <option>常用地址04</option>
-                    <option>常用地址05</option>
+                    <option>{{ address.address_1 }}</option>
+                    <option>{{ address.address_2 }}</option>
+                    <option>{{ address.address_3 }}</option>
+                    <option>{{ address.address_4 }}</option>
+                    <option>{{ address.address_5 }}</option>
                 </select>
             </div>
         </div>
@@ -204,12 +204,18 @@
 		<div class="form-row">
 			<div class="field-label"><label for="field7">优惠券</label>:</div>
             <div class="field-widget">
-                <select  name="field7" class="validate-selection" title="Choose your coupon">
+                <select  name="field7" id = "field7" class="validate-selection" title="Choose your coupon">
+                    {% for item in coupon %}
+                        <option>{{ item.coupon_name}} {{item.Coupon_id}}</option>
+                    {% endfor %}
+
+                    <!--
                     <option>不使用</option>
-                    <option>优惠券01</option>
-                    <option>优惠券02</option>
-                    <option>优惠券03</option>
-                    <option>优惠券04</option>
+                    <option>优惠券</option>
+                    <option>优惠券</option>
+                    <option>优惠券</option>
+                    <option>优惠券</option>
+                    -->
                 </select>
             </div>
 		</div>
@@ -228,7 +234,7 @@
 
 
     </fieldset>
-    <button name="pay" style="width:120px;height:30px;background:#97FFFF ;border:none">确认支付</button> <button name="cancel" style="width:120px;height:30px;background:#97FFFF; border:none">取消订单</button>
+    <button name="pay" onclick="buyer()" style="width:120px;height:30px;background:#97FFFF ;border:none">确认支付</button> <button name="cancel" href="JavaScript:history.back(-1)" style="width:120px;height:30px;background:#97FFFF; border:none">取消订单</button>
     </form>
     </div>
 
@@ -248,8 +254,23 @@
   </div>
 </main>
 
+    
 	<!-- goods js -->
 	<script type="text/javascript" src="./static/style/goods/plugins/jquery/dist/jquery.min.js"></script>
+	<script>
+        function buyer(){
+        	data = {name:$('#field1').val(),phonenumber:$('#field2').val(),note:$('#field3').val(),goods_id:$('#field4').text(),seller:$('#field5').text(),address:$('#field6').val(),coupon:$('#field7').val()};
+            $.ajax({
+                url: "http://127.0.0.1:8000/ordersheet",
+                data:data,
+                type:"POST",
+                dataType: "json",
+                success: function (result) {
+                }
+            });
+            //window.location.href='http://127.0.0.1:8000/myorder';
+		}
+    </script>
 	<script type="text/javascript" src="./static/style/goods/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./static/style/goods/plugins/jquery-bar-rating/dist/jquery.barrating.min.js"></script>
 	<script type="text/javascript" src="./static/style/goods/plugins/owl-carousel/owl.carousel.min.js"></script>

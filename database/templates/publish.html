@@ -155,7 +155,7 @@
                             书籍名称 <em>*</em>
                         </label>
                         <div class="aui-form-input">
-                            <input type="text" class="aui-form-control-two" required id="000" placeholder="请输入书籍名称">
+                            <input name = "book_name" type="text" class="aui-form-control-two" required id="000" placeholder="请输入书籍名称">
                         </div>
                     </div>
                     <div class="aui-form-group clear">
@@ -163,7 +163,23 @@
                             书籍作者 <em>*</em>
                         </label>
                         <div class="aui-form-input">
-                            <input type="text" class="aui-form-control-two" required id="00" placeholder="请输入书籍作者">
+                            <input name = "book_author" type="text" class="aui-form-control-two" required id="00" placeholder="请输入书籍作者">
+                        </div>
+                    </div>
+                     <div class="aui-form-group clear">
+                        <label class="aui-label-control">
+                            版本 <em>*</em>
+                        </label>
+                        <div class="aui-form-input">
+                            <input name = "book_vertion" type="text" class="aui-form-control-two" required id="1" placeholder="请输入出版日期">
+                        </div>
+                    </div>
+                    <div class="aui-form-group clear">
+                        <label class="aui-label-control">
+                            书籍类型 <em>*</em>
+                        </label>
+                        <div class="aui-form-input">
+                            <input name = "book_type" type="text" class="aui-form-control-two" required id="00" placeholder="请输入书籍类型">
                         </div>
                     </div>
                     <div class="aui-form-group clear">
@@ -171,7 +187,7 @@
                             出版社 <em>*</em>
                         </label>
                         <div class="aui-form-input">
-                            <input type="text" class="aui-form-control-two" required id="0" placeholder="请输入出版社">
+                            <input name = "book_publisher"type="text" class="aui-form-control-two" required id="0" placeholder="请输入出版社">
                         </div>
                     </div>
                     <div class="aui-form-group clear">
@@ -179,7 +195,7 @@
                             出版日期 <em>*</em>
                         </label>
                         <div class="aui-form-input">
-                            <input type="text" class="aui-form-control-two" required id="1" placeholder="请输入出版日期">
+                            <input name = "book_publish_date" type="text" class="aui-form-control-two" required id="1" placeholder="请输入出版日期">
                         </div>
                     </div>
                     <div class="aui-form-group clear">
@@ -187,7 +203,7 @@
                             商品原价 <em>*</em>
                         </label>
                         <div class="aui-form-input">
-                            <input type="text" class="aui-form-control-two" required id="2" placeholder="请输入商品原价">
+                            <input name = "book_price" type="text" class="aui-form-control-two" required id="2" placeholder="请输入商品原价">
                         </div>
                     </div>
                     <div class="aui-form-group clear">
@@ -195,7 +211,7 @@
                             当前价格 <em>*</em>
                         </label>
                         <div class="aui-form-input">
-                            <input type="text" class="aui-form-control-two" required id="3" placeholder="请输入当前价格">
+                            <input name = "book_price1" type="text" class="aui-form-control-two" required id="3" placeholder="请输入当前价格">
                         </div>
                     </div>
                     <div class="aui-form-group clear">
@@ -203,7 +219,7 @@
                             书籍余量 <em>*</em>
                         </label>
                         <div class="aui-form-input">
-                            <input type="text" class="aui-form-control-two" required id="4" placeholder="请输入书籍余量">
+                            <input name = "book_amount" type="text" class="aui-form-control-two" required id="4" placeholder="请输入书籍余量">
                         </div>
                     </div>
                     <div class="aui-form-group clear">
@@ -211,7 +227,7 @@
                             书籍详情 <em>*</em>
                         </label>
                         <div class="aui-form-input">
-                            <textarea class="aui-form-control" name="description" id="5" minlength="5" placeholder="请输入书籍详情"></textarea>
+                            <textarea name = "book_introduction" class="aui-form-control" name="description" id="5" minlength="5" placeholder="请输入书籍详情"></textarea>
                         </div>
                     </div>
                     <div class="aui-form-group clear">
@@ -219,20 +235,22 @@
                             更多信息 <em style="opacity: 0">*</em>
                         </label>
                         <div class="aui-form-input">
-                            <textarea class="aui-form-control" name="description" id="6" minlength="5" placeholder="你可以补充书籍信息等(选填)"></textarea>
+                            <textarea name = "book_information" class="aui-form-control" name="description" id="6" minlength="5" placeholder="你可以补充书籍信息等(选填)"></textarea>
                         </div>
                     </div>
                     <div class="aui-form-group clear">
                         <label class="aui-label-control">
                             书籍图片 <em>*</em>
-                            <span>最多5张</span>
+                            <span>最多五张图片</span>
                         </label>
                         <div class="aui-form-input">
                             <div class="aui-content-img-box aui-content-full">
                                 <div class="aui-photo aui-up-img clear">
                                     <section class="aui-file-up fl">
-                                        <img src="./static/style/publish_goods/img/up.png" class="add-img">
-                                        <input type="file" name="file" id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple/>
+                                    	<form id="uploadForm" action="Upload" method="post" enctype="multipart/form-data">
+	                                        <img src="./static/style/publish_goods/img/up.png" class="add-img">
+	                                        <input type="file" name="file" id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple/>
+	                                    </form>
                                     </section>
                                 </div>
                             </div>
@@ -246,7 +264,7 @@
 			</div>
             <div class="aui-btn-default">
                 <div class="form-group text-center">
-					<button class="ps-btn">确定并发布<i class="fa fa-angle-right"></i></button>
+					<button class="ps-btn" href = "seller" onclick = "publish()">确定并发布<i class="fa fa-angle-right"></i></button>
 				</div>
             </div>
         </section>
@@ -277,6 +295,57 @@
 
   </div>
 </main>
+	<script type="text/javascript">
+		function publish(){
+			var book_name = document.getElementsByName("book_name")[0].value;
+            var book_author = document.getElementsByName("book_author")[0].value;
+            var book_publisher = document.getElementsByName("book_publisher")[0].value;
+            var book_publish_date= document.getElementsByName("book_publish_date")[0].value;
+            var book_vertion = document.getElementsByName("book_vertion")[0].value;
+            var book_price = document.getElementsByName("book_price")[0].value;
+            var book_amount = document.getElementsByName("book_amount")[0].value;
+            var book_price1 = document.getElementsByName("book_price1")[0].value;
+            var book_introduction = document.getElementsByName("book_introduction")[0].value;
+            var book_information = document.getElementsByName("book_information")[0].value;
+            var book_type = document.getElementsByName("book_type")[0].value;
+            var user_id = "1";
+
+            //上传商品的信息
+            var goods_id;
+            $.post("/publish",{'book_name':book_name, 'book_author':book_author,"book_publisher":book_publisher,"book_publish_date":book_publish_date,"book_price":book_price,"book_amount":book_amount,"book_price1":book_price1,
+            	"book_introduction":book_introduction,"book_information":book_information,"book_type":book_type,"book_vertion":book_vertion,"user_id":user_id},
+					function (result) {
+	                	var formData = new FormData($("#uploadForm")[0]);
+						$.ajax({
+							type: "POST",
+							data: formData,
+							url: "/Upload/result",
+							contentType: false,
+							processData: false,
+							success:function (data) {
+								alert("商品发布成功")
+							}
+						});
+	                }
+            	);
+            console.log(goods_id)
+            //上传商品的图片
+            /*
+            var formData = new FormData($("#uploadForm")[0]);
+			$.ajax({
+				type: "POST",
+				data: formData,
+				url: "/Upload/1",
+				contentType: false,
+				processData: false,
+				success:function (data) {
+					alert("商品发布成功")
+				})
+			});
+			*/
+            //window.location.href='http://127.0.0.1:8000/seller';
+		}
+	</script>>
 
 	<!-- goods js -->
 	<script type="text/javascript" src="./static/style/goods/plugins/jquery/dist/jquery.min.js"></script>

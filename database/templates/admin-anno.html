@@ -52,7 +52,7 @@
                 活动日志
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" href="login">
                 <i class="mdi mdi-logout mr-2 text-primary"></i>
                 退出登录
               </a>
@@ -198,25 +198,25 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin-index.html">
+            <a class="nav-link" href="admin_index">
               <span class="menu-title">总览</span>
               <i class="mdi mdi-home menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin-user.html">
+            <a class="nav-link" href="admin_user">
               <span class="menu-title">用户管理</span>
               <i class="mdi mdi-account-multiple menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin-goods.html">
+            <a class="nav-link" href="admin_goods">
               <span class="menu-title">商品管理</span>
               <i class="mdi mdi-contacts menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin-anno.html">
+            <a class="nav-link" href="admin_anno">
               <span class="menu-title">公告管理</span>
               <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>
@@ -229,8 +229,8 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="admin-activity.html">活动中心</a></li>
-                <li class="nav-item"> <a class="nav-link" href="admin-coupon.html">优惠券管理</a></li>
+                <li class="nav-item"> <a class="nav-link" href="admin_activity">活动中心</a></li>
+                <li class="nav-item"> <a class="nav-link" href="admin_coupon">优惠券管理</a></li>
               </ul>
             </div>
           </li>
@@ -280,8 +280,8 @@
                     <div class="form-group">
                       <textarea class="form-control" id="anno_content" rows="4" placeholder="公告内容（必填）"></textarea>
                     </div>
-                    <button type="button" class="btn btn-inverse-danger btn-fw">发布</button>
                   </form>
+                    <button type="button" onclick="submits()" class="btn btn-inverse-danger btn-fw">发布</button>
                 </div>
               </div>
             </div>
@@ -813,6 +813,27 @@
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
+  <script type="text/javascript" src="./static/style/goods/plugins/jquery/dist/jquery.min.js"></script>
+  <script>
+      function submits() {
+          data = {
+              title: $('#exampleInputUsername1').val(),
+              type: $('#anno_type').val(),
+              content: $('#anno_content').val()
+          };
+          console.log(data);
+          $.ajax({
+              url: "/pubanno",
+              data: data,
+              type: "POST",
+              dataType: "json",
+              success: function (result) {
+                  alert("发布成功")
+              }
+          });
+      }
+  </script>
+
   <!-- plugins:js -->
   <script src="./static/style/admin/vendors/js/vendor.bundle.base.js"></script>
   <script src="./static/style/admin/vendors/js/vendor.bundle.addons.js"></script>

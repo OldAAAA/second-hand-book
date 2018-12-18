@@ -30,8 +30,8 @@ class User(AbstractBaseUser):
     user_is_active = models.BooleanField(blank=False,default= False)
 
 class Book(models.Model):
-    bool_id = models.CharField(max_length=30, primary_key=True)
-    book_name = models.TextField(unique=True)
+    bool_id = models.BigAutoField(primary_key=True)
+    book_name = models.TextField()
     publish_time = models.CharField(max_length=30,default="2018-12-12")
     book_version = models.CharField(max_length=15)
     author = models.TextField(null=True)
@@ -40,12 +40,13 @@ class Book(models.Model):
 
 
 class Goods(models.Model):
-    goods_id = models.CharField(max_length=30, primary_key=True)
+    goods_id = models.BigAutoField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     book_id = models.ForeignKey(Book, on_delete=models.CASCADE)
     goods_name = models.CharField(max_length=40,default='')
     goods_time = models.CharField(max_length=20,default='2018-12-12')
     goods_price = models.DecimalField(max_digits=10, decimal_places=2)
+    goods_price1 =  models.DecimalField(max_digits=10, decimal_places=2,default=80)
     introduction = models.TextField()
     subject = models.TextField()
     amount = models.IntegerField()
@@ -90,14 +91,26 @@ class Favorites(models.Model):
     date = models.DateField(auto_now_add=True)
     Label = models.TextField()
 
+class Coupon(models.Model):
+    Coupon_id = models.BigAutoField(primary_key=True)
+    coupon_name = models.CharField(max_length=50)
+    credits = models.IntegerField(default=10)
+    begin_time = models.CharField(max_length=50)
+    end_time = models.CharField(max_length=50)
 
 class Ordersheet(models.Model):
-    order_id = models.CharField(max_length=30, primary_key=True)
-    buyer_id = models.CharField(max_length=30)
-    Seller_id = models.CharField(max_length=30)
+    order_id = models.BigAutoField( primary_key=True)
+    buyer_id = models.ForeignKey(User,on_delete=models.CASCADE,related_name = "buyer")
+    Seller_id = models.ForeignKey(User,on_delete=models.CASCADE,related_name = "seller")
     goods_id = models.ForeignKey(Goods, on_delete=models.CASCADE)
     state = models.CharField(max_length=10)
     is_paid = models.BooleanField()
+    name = models.CharField(max_length=30,default="")
+    note = models.TextField(default="")
+    final_price = models.FloatField(default="0")
+    coupon_id = models.ForeignKey(Coupon,on_delete= models.CASCADE,default=1)
+    phonenumber = models.IntegerField(default="18801119875")
+    date = models.CharField(max_length=20,default="2018-1-1")
 
 
 class User_comment(models.Model):
@@ -107,12 +120,7 @@ class User_comment(models.Model):
     comment_rank = models.IntegerField(default= 5)
     date = models.DateField()
 
-class Coupon(models.Model):
-    Coupon_id = models.CharField(max_length=30, primary_key=True)
-    coupon_name = models.CharField(max_length=50)
-    credits = models.DecimalField(max_digits=5, decimal_places=5)
-    begin_time = models.DateField(auto_now_add=True)
-    end_time = models.DateField()
+
 
 
 #活动的详情的列表
@@ -136,7 +144,13 @@ class Activity_price(models.Model):
 
 
 class Announcement(models.Model):
-    an_id = models.CharField(max_length=30, primary_key=True)
+    an_id = models.BigAutoField(default=1,primary_key=True)
     an_title = models.CharField(max_length=50)
     an_content = models.TextField()
     date = models.CharField(max_length=20)
+    type = models.CharField(max_length=20,default="系统公告")
+
+class User_coupon(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    ammount = models.IntegerField()
+    Coupon_id = models.ForeignKey(Coupon, on_delete=models.CASCADE)

@@ -212,8 +212,12 @@
 			  </select>
 			</div>
 			  <div style="margin-bottom: 35px"></div>
-			<div class="ps-product__shopping"><a class="ps-btn mb-10" href="">立即购买<i class="ps-icon-next"></i></a>
-			  <div class="ps-product__actions"><a class="mr-10" href="#" title="加入购物车"><i class="fa fa-cart-plus"></i></a><a href="#" title="收藏商品"><i class="ps-icon-heart"></i></a></div>
+			<div class="ps-product__shopping">
+                <button class="ps-btn mb-10" ><a id = "buger">立即购买</a><i class="ps-icon-next"></i></button>
+                    <div class="ps-product__actions">
+                        <a class="mr-10" href="#" title="加入购物车"><i class="fa fa-cart-plus"></i></a>
+                        <a href="#" title="收藏商品"><i class="ps-icon-heart"></i></a>
+                    </div>
 			</div>
 		  </div>
 		  <div class="clearfix"></div>
@@ -376,6 +380,7 @@
                     		$('#goods_name').text(data.goods_name);
                     		$('#goods_price').text(data.goods_price);
                     		$('#goods_introduction').text(data.introduction);
+                    		$('#buger').attr("href","/ordersheet?goods_id="+data.goods_id)
                     	}else if(count == 1){
                     		$('#goods_author').empty();
                     		$('#goods_author').html('作者：<a>'+data.author+'</a>');
