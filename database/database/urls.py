@@ -44,4 +44,5 @@ urlpatterns = [
     path('admin_index',views.admin_index),
     path('logout',views.logout),
     path('pubanno',views.pubanno),
+    path('admin_create',views.pubanno),
 ]

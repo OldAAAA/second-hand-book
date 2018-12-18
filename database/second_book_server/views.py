@@ -17,14 +17,21 @@ def register(request):
         username = data.get('nickname')
         password = data.get('password')
         university = data.get('university')
+        admin = data.get('admin')
         print(email)
         find_same = User.object.filter(email = email)
         print(find_same)
         if len(find_same) > 0:
-            return render(request,'register.html')
+            if admin:
+                return JsonResponse({"data": "failure"}, safe=False)
+            else:
+                return render(request, 'register.html')
         else:
             User.object.create_user(email = email,username=username,password = password,university=university)
-            return redirect('/log')
+            if not admin:
+                return redirect('/log')
+            else:
+                return JsonResponse({"data": "success"}, safe=False)
 
 def login(request):
     if request.method == 'GET':
@@ -339,6 +346,7 @@ def pubanno(request):
     )
     anno.save()
     return HttpResponse("OK")
+
 
 
 
