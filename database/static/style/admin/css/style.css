@@ -20973,3 +20973,16 @@ my_css
 .error_hint i:hover {
   color: #a898ff;
 }
+
+.operate {
+}
+
+.operate a {
+  cursor: pointer;
+  color: #00A8FF;
+}
+
+.operate a:hover {
+  color: #763cff;
+}
+
