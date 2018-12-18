@@ -55,7 +55,7 @@
                 活动日志
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="login">
+              <a class="dropdown-item" href="#">
                 <i class="mdi mdi-logout mr-2 text-primary"></i>
                 退出登录
               </a>
@@ -191,7 +191,7 @@
             <a href="#" class="nav-link">
               <div class="nav-profile-image">
                 <img src="./static/style/admin/images/faces/face1.jpg" alt="profile">
-                <span class="login-status online"></span> <!--change to offline or busy as needed-->              
+                <span class="login-status online"></span> <!--change to offline or busy as needed-->
               </div>
               <div class="nav-profile-text d-flex flex-column">
                 <span class="font-weight-bold mb-2">在下管理员</span>
@@ -201,25 +201,25 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin_index">
+            <a class="nav-link" href="admin-index.html">
               <span class="menu-title">总览</span>
               <i class="mdi mdi-home menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin_user">
+            <a class="nav-link" href="admin-user.html">
               <span class="menu-title">用户管理</span>
               <i class="mdi mdi-account-multiple menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin_goods">
+            <a class="nav-link" href="admin-goods.html">
               <span class="menu-title">商品管理</span>
               <i class="mdi mdi-contacts menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin_anno">
+            <a class="nav-link" href="admin-anno.html">
               <span class="menu-title">公告管理</span>
               <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>
@@ -232,8 +232,8 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="admin_activity">活动中心</a></li>
-                <li class="nav-item"> <a class="nav-link" href="admin_coupon">优惠券管理</a></li>
+                <li class="nav-item"> <a class="nav-link" href="admin-activity.html">活动中心</a></li>
+                <li class="nav-item"> <a class="nav-link" href="admin-coupon.html">优惠券管理</a></li>
               </ul>
             </div>
           </li>
@@ -251,6 +251,18 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
+            <div id="error_msg_panel" class="row" style="display: none">
+                <div class="col-12">
+                    <div class="d-flex align-items-center purchase-popup my_center" style="background-color: white">
+                        <div id="error_msg_content" style="width: 99%; text-align: center; color: #a70000; font-weight: bold">
+                            error message.
+                        </div>
+                        <div class="error_hint">
+                            <i class="mdi mdi-close popup-dismiss" onclick="hideErrorMessage()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
           <div class="page-header">
             <h3 class="page-title">
               用户管理
@@ -261,33 +273,27 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">创建用户</h4>
-                  <form class="forms-sample">
+                  <form class="forms-sample" id="form" action="/register" method="post">
                     <div class="form-group">
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="邮箱地址(必填)">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="邮箱地址(必填)">
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" id="nickname" placeholder="昵称(选填)">
+                      <input type="text" class="form-control" id="nickname" name="nickname" placeholder="昵称(选填)">
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" id="university" placeholder="学校(必填)">
+                      <input type="text" class="form-control" id="university" name="university" placeholder="学校(必填)">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码(必填)">
+                      <input type="password" class="form-control" id="password" name="password" placeholder="密码(必填)">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="确认密码(必填)">
+                      <input type="password" class="form-control" id="password_cfm" name="password_cfm" placeholder="确认密码(必填)">
                     </div>
-                    <div class="form-group">
-                      <select class="form-control" id="exampleFormControlSelect2">
-                        <option>普通用户</option>
-                        <option>管理员</option>
-                      </select>
-                    </div>
-                    <button type="button" class="btn btn-outline-primary btn-icon-text">
+                  </form>
+                    <button id="bn_submit" type="button" class="btn btn-outline-primary btn-icon-text" onclick="checkUserInfo()">
                       <i class="mdi mdi-file-check btn-icon-prepend"></i>
                       确认创建
                     </button>
-                  </form>
                 </div>
               </div>
             </div>
@@ -527,6 +533,39 @@
     </div>
     <!-- page-body-wrapper ends -->
   </div>
+
+  <script>
+      function checkUserInfo() {
+          let email = $("#email").val();
+          let university = $("#university").val();
+          let password = $("#password").val();
+          let password_cfm = $("#password_cfm").val();
+
+          let strReg = /^\w+((-\w+)|(\.\w+))*\@{1}\w+\.{1}\w{2,4}(\.{0,1}\w{2}){0,1}/ig;
+          let r = email.search(strReg);
+          if (r === -1) {
+              showErrorMessage("邮箱格式错误！");
+          } else if (university.length <= 0) {
+              showErrorMessage("请填写您的大学！");
+          } else if (password.length < 6) {
+              showErrorMessage("密码不能小于6个字符！");
+          } else if (password !== password_cfm) {
+              showErrorMessage("两次密码不匹配！");
+          } else {
+              hideErrorMessage();
+              $("#form").submit();
+          }
+      }
+
+      function showErrorMessage(message) {
+          $("#error_msg_panel").css("display", "block");
+          $("#error_msg_content").html(message);
+      }
+
+      function hideErrorMessage() {
+          $("#error_msg_panel").css("display", "none");
+      }
+  </script>
   <!-- container-scroller -->
   <!-- plugins:js -->
   <script src="./static/style/admin/vendors/js/vendor.bundle.base.js"></script>

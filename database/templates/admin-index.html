@@ -51,7 +51,7 @@
                 活动日志
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="login">
+              <a class="dropdown-item" href="#">
                 <i class="mdi mdi-logout mr-2 text-primary"></i>
                 退出登录
               </a>
@@ -187,7 +187,7 @@
             <a href="#" class="nav-link">
               <div class="nav-profile-image">
                 <img src="./static/style/admin/images/faces/face1.jpg" alt="profile">
-                <span class="login-status online"></span> <!--change to offline or busy as needed-->              
+                <span class="login-status online"></span> <!--change to offline or busy as needed-->
               </div>
               <div class="nav-profile-text d-flex flex-column">
                 <span class="font-weight-bold mb-2">在下管理员</span>
@@ -197,25 +197,25 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin_index">
+            <a class="nav-link" href="admin-index.html">
               <span class="menu-title">总览</span>
               <i class="mdi mdi-home menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin_user">
+            <a class="nav-link" href="admin-user.html">
               <span class="menu-title">用户管理</span>
               <i class="mdi mdi-account-multiple menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin_goods">
+            <a class="nav-link" href="admin-goods.html">
               <span class="menu-title">商品管理</span>
               <i class="mdi mdi-contacts menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin_anno">
+            <a class="nav-link" href="admin-anno.html">
               <span class="menu-title">公告管理</span>
               <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>
@@ -228,8 +228,8 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="admin_activity">活动中心</a></li>
-                <li class="nav-item"> <a class="nav-link" href="admin_coupon">优惠券管理</a></li>
+                <li class="nav-item"> <a class="nav-link" href="admin-activity.html">活动中心</a></li>
+                <li class="nav-item"> <a class="nav-link" href="admin-coupon.html">优惠券管理</a></li>
               </ul>
             </div>
           </li>
@@ -251,7 +251,7 @@
           <div class="page-header">
             <h3 class="page-title">
               <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                <i class="mdi mdi-home"></i>                 
+                <i class="mdi mdi-home"></i>
               </span>
               总览
             </h3>
@@ -264,8 +264,8 @@
                   <h4 class="font-weight-normal mb-3">本周成交金额
                     <i class="mdi mdi-cash-usd mdi-24px float-right"></i>
                   </h4>
-                  <h2 class="mb-5">￥ 15,000</h2>
-                  <h6 class="card-text">增长 60%</h6>
+                  <h2 class="mb-5">￥ {{ data.amount }}</h2>
+                  <h6 class="card-text">{{ data.amount_rate }}</h6>
                 </div>
               </div>
             </div>
@@ -276,8 +276,8 @@
                   <h4 class="font-weight-normal mb-3">本周成交订单
                     <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                   </h4>
-                  <h2 class="mb-5">4,733</h2>
-                  <h6 class="card-text">下降 10%</h6>
+                  <h2 class="mb-5">{{ data.ordersheet_num }}</h2>
+                  <h6 class="card-text">{{ data.ordersheet_rate }}</h6>
                 </div>
               </div>
             </div>
@@ -288,34 +288,13 @@
                   <h4 class="font-weight-normal mb-3">注册用户总数
                     <i class="mdi mdi-account-multiple mdi-24px float-right"></i>
                   </h4>
-                  <h2 class="mb-5">350</h2>
-                  <h6 class="card-text">本周增加 4 人</h6>
+                  <h2 class="mb-5">{{ data.user_num }}</h2>
+                  <h6 class="card-text">{{ data.user_rate }}</h6>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-7 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <div class="clearfix">
-                    <h4 class="card-title float-left">Visit And Sales Statistics</h4>
-                    <div id="visit-sale-chart-legend" class="rounded-legend legend-horizontal legend-top-right float-right"></div>                                     
-                  </div>
-                  <canvas id="visit-sale-chart" class="mt-4"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-5 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">书籍销售总览</h4>
-                  <canvas id="traffic-chart"></canvas>
-                  <div id="traffic-chart-legend" class="rounded-legend legend-vertical legend-bottom-left pt-4"></div>                                                      
-                </div>
-              </div>
-            </div>
-          </div>
+
           <div class="row">
             <div class="col-12 grid-margin">
               <div class="card">
@@ -343,78 +322,18 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>
-                            <img src="./static/style/admin/images/faces/face1.jpg" class="mr-2" alt="image">
-                            在下管理员
-                          </td>
-                          <td>
-                            数据库系统 第五版
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-success">未发货</label>
-                          </td>
-                          <td>
-                            2018/12/14
-                          </td>
-                          <td>
-                            12178 20181214 0533
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img src="./static/style/admin/images/faces/face2.jpg" class="mr-2" alt="image">
-                            Stella Johnson
-                          </td>
-                          <td>
-                            会计管理
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-warning">已收货</label>
-                          </td>
-                          <td>
-                            2018/12/09
-                          </td>
-                          <td>
-                            12169 20181209 1247
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img src="./static/style/admin/images/faces/face3.jpg" class="mr-2" alt="image">
-                            Marina Michel
-                          </td>
-                          <td>
-                            Website down for one week
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-info">运输中</label>
-                          </td>
-                          <td>
-                            2014/02/13
-                          </td>
-                          <td>
-                            12169 20181209 1247
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img src="./static/style/admin/images/faces/face4.jpg" class="mr-2" alt="image">
-                            John Doe
-                          </td>
-                          <td>
-                            Loosing control on server
-                          </td>
-                          <td>
-                            <label class="badge badge-gradient-danger">派送中</label>
-                          </td>
-                          <td>
-                            2018/12/14
-                          </td>
-                          <td>
-                            12169 20181209 1247
-                          </td>
-                        </tr>
+                        {% for order_info in data.latest_order_sheet %}
+                            <tr>
+                                <td>
+                                    {{ order_info.username }}
+                                </td>
+                                <td>{{ order_info.goods_name }}</td>
+                                <td><label class="badge badge-gradient-success">{{ order_info.order_sheet_state }}</label></td>
+                                <td>{{ order_info.order_sheet_time }}</td>
+                                <td>{{ order_info.order_sheet_id }}</td>
+                            </tr>
+                        {% endfor %}
+
                       </tbody>
                     </table>
                   </div>
@@ -422,6 +341,7 @@
               </div>
             </div>
           </div>
+        </div>
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
@@ -438,6 +358,10 @@
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
+
+  <script>
+
+  </script>
 
   <!-- plugins:js -->
   <script src="./static/style/admin/vendors/js/vendor.bundle.base.js"></script>

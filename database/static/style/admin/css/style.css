@@ -20949,3 +20949,27 @@ dl li {
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+
+/**
+my_css
+ */
+
+/*居中*/
+.my_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_hint {
+  width: 1%;
+}
+
+.error_hint i {
+  cursor: pointer;
+  float: right;
+}
+
+.error_hint i:hover {
+  color: #a898ff;
+}

@@ -8,7 +8,7 @@ from django.http import HttpResponse, JsonResponse
 import time
 import os
 
-def registe(request):
+def register(request):
     if request.method == 'GET':
         return render(request,'register.html')
     if request.method == 'POST':
@@ -179,7 +179,30 @@ def admin_goods(request):
 
 #g管理员的默认界面
 def admin_index(request):
-    return render(request,"admin-index.html")
+    if request.method == "GET":
+        data = dict()
+        data['amount'] = 4333
+        data['amount_rate'] = "增长了 31%"
+        data["ordersheet_num"] = 2333
+        data["ordersheet_rate"] = "下降了 5.2%"
+        data['user_num'] = 350
+        data['user_rate'] = "增加了 25 人"
+        # 最近订单
+        latest_order_list = []
+        for x in range(0, 10):
+            latest_order = dict()
+            latest_order['username'] = 'Peter'
+            latest_order['goods_name'] = "Database System"
+            latest_order['order_sheet_state'] = "delivering"
+            latest_order['order_sheet_time'] = "2018/12/18"
+            latest_order['order_sheet_id'] = "12178 20181214 0533"
+            latest_order_list.append(latest_order)
+        data['latest_order_sheet'] = latest_order_list
+        # 返回的json格式
+        repos = {"data": data, "code": 200, "error_msg": ""}
+        return render(request, "admin-index.html", repos)
+
+    return HttpResponse("OK")
 
 #管理员管理用户界面
 def admin_user(request):
