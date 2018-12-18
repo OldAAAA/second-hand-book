@@ -324,9 +324,7 @@
                       <tbody>
                         {% for order_info in data.latest_order_sheet %}
                             <tr>
-                                <td>
-                                    {{ order_info.username }}
-                                </td>
+                                <td>{{ order_info.username }}</td>
                                 <td>{{ order_info.goods_name }}</td>
                                 <td><label class="badge badge-gradient-success">{{ order_info.order_sheet_state }}</label></td>
                                 <td>{{ order_info.order_sheet_time }}</td>

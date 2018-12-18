@@ -248,6 +248,18 @@
       <!-- partial -->
       <div class="main-panel">          
         <div class="content-wrapper">
+            <div id="error_msg_panel" class="row" style="display: none">
+                <div class="col-12">
+                    <div class="d-flex align-items-center purchase-popup my_center" style="background-color: white">
+                        <div id="error_msg_content" style="width: 99%; text-align: center; color: #a70000; font-weight: bold">
+                            error message.
+                        </div>
+                        <div class="error_hint">
+                            <i class="mdi mdi-close popup-dismiss" onclick="hideErrorMessage()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
           <div class="page-header">
             <h3 class="page-title">
               活动中心
@@ -259,61 +271,63 @@
                 <div class="card-body">
                   <h4 class="card-title">发布活动</h4>
                   <div style="margin-bottom: 2em"></div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text">@</span>
-                      </div>
-                      <input type="text" class="form-control" placeholder="请输入商品ID (多个商品请用 '/' 分隔)" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text bg-gradient-primary text-white">￥</span>
-                      </div>
-                      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="商品活动价格">
-                    </div>
-                  </div>
-                  <blockquote class="blockquote">
-                    <div class="form-group row">
-                    <div class="col-sm-4">
-                      <div class="form-check">
-                        <label id="label_url" class="form-check-label" onclick="activityImage(1)">
-                          <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" checked>
-                          图片URL
-                        </label>
-                      </div>
-                      </div>
-                      <div class="col-sm-5">
-                        <div class="form-check">
-                          <label id="label_upload" class="form-check-label" onclick="activityImage(2)">
-                            <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2">
-                            上传海报图片
-                          </label>
+                    <form id="form_publish_activity">
+                        <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">@</span>
+                          </div>
+                          <input type="text" id="goods_id" name="goods_id" class="form-control" placeholder="请输入商品ID (多个商品请用 '/' 分隔)" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                       </div>
-                    </div>
-                    <div id="div_url" class="form-group">
-                      <input type="text" class="form-control" id="image_url" placeholder="请输入图片URL">
-                    </div>
-                    <div id="div_upload" class="form-group" style="display: none">
-                      <input type="file" name="img[]" class="file-upload-default">
-                      <div class="input-group col-xs-12">
-                        <input type="text" class="form-control file-upload-info" disabled placeholder="上传海报图片">
-                        <span class="input-group-append">
-                          <button class="file-upload-browse btn btn-gradient-primary" type="button">选择图片</button>
-                        </span>
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text bg-gradient-primary text-white">￥</span>
+                          </div>
+                          <input type="text" name="activity_price" id="activity_price" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="商品活动价格">
+                        </div>
                       </div>
-                    </div>
-                  </blockquote>
-                  <div class="form-group">
-                  <input type="text" class="form-control" id="start_time" placeholder="活动开始时间">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="end_time" placeholder="活动结束时间">
-                  </div>
-                  <button type="button" class="btn btn-outline-secondary btn-lg btn-block">
+                      <blockquote class="blockquote">
+                        <div class="form-group row">
+                        <div class="col-sm-4">
+                          <div class="form-check">
+                            <label id="label_url" class="form-check-label" onclick="activityImage(1)">
+                              <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" checked>
+                              图片URL
+                            </label>
+                          </div>
+                        </div>
+                          <div class="col-sm-5">
+                            <div class="form-check">
+                              <label id="label_upload" class="form-check-label" onclick="activityImage(2)">
+                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2">
+                                上传海报图片
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div id="div_url" class="form-group">
+                          <input type="text" name="image_url" class="form-control" id="image_url" placeholder="请输入图片URL">
+                        </div>
+                        <div id="div_upload" class="form-group" style="display: none">
+                          <input type="file" name="img[]" class="file-upload-default">
+                          <div class="input-group col-xs-12">
+                            <input type="text" class="form-control file-upload-info" disabled placeholder="上传海报图片">
+                            <span class="input-group-append">
+                              <button class="file-upload-browse btn btn-gradient-primary" type="button">选择图片</button>
+                            </span>
+                          </div>
+                        </div>
+                      </blockquote>
+                      <div class="form-group">
+                      <input type="text" name="activity_start_time" class="form-control" id="start_time" placeholder="活动开始时间">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="activity_end_time" class="form-control" id="end_time" placeholder="活动结束时间">
+                      </div>
+                    </form>
+                  <button type="button" class="btn btn-outline-secondary btn-lg btn-block" onclick="publishActivity()">
                     <i class="mdi mdi-upload btn-icon-prepend"></i>
                     发布活动
                   </button>
@@ -324,6 +338,19 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">活动管理</h4>
+                    <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>活动ID</th>
+                        <th>涉及商品</th>
+                        <th>活动价格</th>
+                        <th>开始时间</th>
+                        <th>结束时间</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody id="activity_list"></tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -344,6 +371,88 @@
     </div>
     <!-- page-body-wrapper ends -->
   </div>
+
+  <script>
+      window.onload = function () {
+          loadActivityList();
+      };
+
+      function publishActivity() {
+          let goods_id = $("#goods_id").val();
+          let activity_price = $("#activity_price").val();
+          let image_url = $("#image_url").val();
+          let start_time = $("#start_time").val();
+          let end_time = $("#end_time").val();
+          if (goods_id !== "" && activity_price !== "" && image_url !== "" &&
+          start_time !== "" && end_time !== "") {
+              $.ajax({
+                  url: "/admin_publish_activity",
+                  type: "POST",
+                  dataType: "json",
+                  data: $('#form_create').serialize(),
+                  success: repos => {
+                      if (repos.data === "success") {
+                          showErrorMessage("发布成功！");
+                          loadActivityList();
+                          clearInput();
+                      } else {
+                          showErrorMessage("发布失败！")
+                      }
+                  },
+                  error: repos => {
+                      showErrorMessage("发布失败！");
+                  }
+              })
+          } else {
+              showErrorMessage("请将信息填写完整！")
+          }
+      }
+
+      /**
+       * 显示错误消息
+       * @param message
+       */
+      function showErrorMessage(message) {
+          $("#error_msg_panel").css("display", "block");
+          $("#error_msg_content").html(message);
+      }
+
+      /**
+       * 隐藏错误消息
+       */
+      function hideErrorMessage() {
+          $("#error_msg_panel").css("display", "none");
+      }
+
+      function clearInput() {
+          $(".input").val("");
+      }
+
+      function loadActivityList() {
+          $.ajax({
+              url: "/admin_activity_list",
+              type: "GET",
+              dataType: "json",
+              success: repos => {
+                  let content = "";
+                  for (let i = 0; i < repos.length; i++) {
+                      content += "<tr>" +
+                                  "<td>" + repos[i].activity_id + "</td>" +
+                                  "<td>" + repos[i].goods_id + "</td>" +
+                                  "<td>" + repos[i].activity_price + "</td>" +
+                                  "<td>" + repos[i].activity_start_time + "</td>" +
+                                  "<td>" + repos[i].activity_end_time + "</td>" +
+                                  "<td>删除</td>" +
+                                  "</tr>";
+                  }
+                  $("#activity_list").html(content);
+              },
+              error: repos => {
+                  showErrorMessage("当前尚未发布活动");
+              }
+          })
+      }
+  </script>
   <!-- container-scroller -->
   <!-- plugins:js -->
   <script src="./static/style/admin/vendors/js/vendor.bundle.base.js"></script>

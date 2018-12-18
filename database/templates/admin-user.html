@@ -273,7 +273,7 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">创建用户</h4>
-                  <form class="forms-sample" id="form" action="/register" method="post">
+                  <form class="forms-sample" id="form_create" action="/register" method="post">
                       <input name="admin" style="display: none" value="admin"/>
                     <div class="form-group">
                       <input type="email" class="form-control" id="email" name="email" placeholder="邮箱地址(必填)">
@@ -301,44 +301,16 @@
             <div class="col-lg-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">账户列表</h4>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="搜索用户" aria-label="搜索用户" aria-describedby="basic-addon2">
-                      <div class="input-group-append">
-                        <button class="btn btn-sm btn-gradient-primary" type="button">搜索</button>
-                      </div>
-                    </div>
-                  </div>
+                  <h4 class="card-title">最新登录</h4>
                   <table class="table table-hover">
                     <thead>
                       <tr>
                         <th>用户</th>
                         <th>注册时间</th>
                         <th>上次登录</th>
-                        <th>操作</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>Jacob</td>
-                        <td>2018/12/12</td>
-                        <td>2018/12/12</td>
-                        <td class="text-danger"><a href="#">修改</a>/<a href="#">删除</a></td>
-                      </tr>
-                      <tr>
-                        <td>Jacob</td>
-                        <td>2018/12/12</td>
-                        <td>2018/12/12</td>
-                        <td class="text-danger"><a href="#">修改</a>/<a href="#">删除</a></td>
-                      </tr>
-                      <tr>
-                        <td>Jacob</td>
-                        <td>2018/12/12</td>
-                        <td>2018/12/12</td>
-                        <td class="text-danger"><a href="#">修改</a>/<a href="#">删除</a></td>
-                      </tr>
-                    </tbody>
+                    <tbody id="users_latest_login"></tbody>
                   </table>
                 </div>
               </div>
@@ -346,173 +318,32 @@
             <div class="col-lg-12 stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">用户排行 </h4>
                   <div class="form-group">
-                    <select class="form-control form-control-sm" id="exampleFormControlSelect3">
-                      <option>按收入金额</option>
-                      <option>按支出金额</option>
-                      <option>按售出数量</option>
-                      <option>按购买数量</option>
-                    </select>
+                    <div class="input-group">
+                        <h4 class="card-title">用户列表</h4>
+                        <div style="width: 2em"></div>
+                        <form id="form_search">
+                            <input id="search_user" name="searched_user" type="text" class="form-control" placeholder="搜索用户" aria-label="搜索用户" aria-describedby="basic-addon2">
+                        </form>
+                          <div class="input-group-append">
+                            <button class="btn btn-sm btn-gradient-primary" type="button" onclick="searchUser()">搜索</button>
+                          </div>
+                        <div style="width: 2em"></div>
+                        <p id="search_hint"></p>
+                    </div>
                   </div>
                   <table class="table table-bordered">
                     <thead>
                       <tr>
-                        <th>
-                          排名
-                        </th>
-                        <th>
-                          用户
-                        </th>
-                        <th>
-                          金额
-                        </th>
-                        <th>
-                          商品数量
-                        </th>
-                        <th>
-                          上次成交
-                        </th>
+                        <th>用户</th>
+                        <th>昵称</th>
+                        <th>学校</th>
+                        <th>注册时间</th>
+                        <th>上次登录</th>
+                        <th>操作</th>
                       </tr>
                     </thead>
-                    <tbody id="user_list">
-                      <tr class="table-info">
-                        <td>
-                          1
-                        </td>
-                        <td>
-                          Herman Beck
-                        </td>
-                        <td>
-                          ￥ 16,000
-                        </td>
-                        <td>
-                          102
-                        </td>
-                        <td>
-                          2018/12/15 15:40:30
-                        </td>
-                      </tr>
-                      <tr class="table-info">
-                        <td>
-                          2
-                        </td>
-                        <td>
-                          Herman Beck
-                        </td>
-                        <td>
-                          ￥ 16,000
-                        </td>
-                        <td>
-                          102
-                        </td>
-                        <td>
-                          2018/12/15 15:40:30
-                        </td>
-                      </tr>
-                      <tr class="table-info">
-                        <td>
-                          3
-                        </td>
-                        <td>
-                          Herman Beck
-                        </td>
-                        <td>
-                          ￥ 16,000
-                        </td>
-                        <td>
-                          102
-                        </td>
-                        <td>
-                          2018/12/15 15:40:30
-                        </td>
-                      </tr>
-                      <tr class="table-info">
-                        <td>
-                          4
-                        </td>
-                        <td>
-                          Herman Beck
-                        </td>
-                        <td>
-                          ￥ 16,000
-                        </td>
-                        <td>
-                          102
-                        </td>
-                        <td>
-                          2018/12/15 15:40:30
-                        </td>
-                      </tr>
-                      <tr class="table-info">
-                        <td>
-                          5
-                        </td>
-                        <td>
-                          Herman Beck
-                        </td>
-                        <td>
-                          ￥ 16,000
-                        </td>
-                        <td>
-                          102
-                        </td>
-                        <td>
-                          2018/12/15 15:40:30
-                        </td>
-                      </tr>
-                      <tr class="table-info">
-                        <td>
-                          6
-                        </td>
-                        <td>
-                          Herman Beck
-                        </td>
-                        <td>
-                          ￥ 16,000
-                        </td>
-                        <td>
-                          102
-                        </td>
-                        <td>
-                          2018/12/15 15:40:30
-                        </td>
-                      </tr>
-                      <tr class="table-info">
-                        <td>
-                          7
-                        </td>
-                        <td>
-                          Herman Beck
-                        </td>
-                        <td>
-                          ￥ 16,000
-                        </td>
-                        <td>
-                          102
-                        </td>
-                        <td>
-                          2018/12/15 15:40:30
-                        </td>
-                      </tr>
-                      <tr class="table-info">
-                        <td>
-                          8
-                        </td>
-                        <td>
-                          Herman Beck
-                        </td>
-                        <td>
-                          ￥ 16,000
-                        </td>
-                        <td>
-                          102
-                        </td>
-                        <td>
-                          2018/12/15 15:40:30
-                        </td>
-                      </tr>
-                    </tbody>
+                    <tbody id="user_list"></tbody>
                   </table>
                 </div>
               </div>
@@ -536,6 +367,10 @@
   </div>
 
   <script>
+      window.onload = function () {
+          loadUserList()
+      };
+
       function checkUserInfo() {
           let email = $("#email").val();
           let university = $("#university").val();
@@ -558,10 +393,11 @@
                       url: "/register",
                       type: "POST",
                       dataType: "json",
-                      data: $('#form').serialize(),
+                      data: $('#form_create').serialize(),
                       success: repos => {
                           if (repos.data === "success") {
                               showErrorMessage("注册成功！");
+                              loadUserList();
                               clearInput();
                           } else {
                               showErrorMessage("该邮箱已被注册！")
@@ -574,6 +410,9 @@
           }
       }
 
+      /**
+       * 清除输入框内容
+       */
       function clearInput() {
           $("#email").val("");
           $("#nickname").val("");
@@ -582,32 +421,107 @@
           $("#password_cfm").val("");
       }
 
+      /**
+       * 显示错误消息
+       * @param message
+       */
       function showErrorMessage(message) {
           $("#error_msg_panel").css("display", "block");
           $("#error_msg_content").html(message);
       }
 
+      /**
+       * 隐藏错误消息
+       */
       function hideErrorMessage() {
           $("#error_msg_panel").css("display", "none");
       }
 
-      function showUserList() {
+      /**
+       * 加载用户列表
+       */
+      function loadUserList() {
           $.ajax({
               url: "/admin_user_list",
+              type: "GET",
+              dataType: "json",
+              success: repos => {
+                  $("#user_list").html(parseUserListData(repos.data));
+              },
+              error: repos => {
+                  $("#user_list").html("无法加载用户列表，请刷新重试");
+              }
+          })
+      }
+
+      /**
+       * 加载最近登录
+       **/
+      function loadLatestLogin() {
+          $.ajax({
+              url: "/admin_user_latest_login",
               type: "GET",
               dataType: "json",
               success: repos => {
                   let content = "";
                   for (let i = 0; i < repos.length; i++) {
                       content += "<tr>" +
-                                      "<td>" + repos[i].username + "</td>" +
-                                      "<td>" + repos[i].register_time + "</td>" +
-                                      "<td>" + repos[i].last_login + "</td>" +
-                                      "<td>" + repos[i].last_login + "</td>" +
+                                  "<td>" + repos[i].username + "</td>" +
+                                  "<td>" + repos[i].register_time + "</td>" +
+                                  "<td>" + repos[i].last_login + "</td>" +
                                   "</tr>";
                   }
+                  $("#users_latest_login").html(content);
+              },
+              error: repos => {
+                  showErrorMessage("暂无最近数据！");
               }
           })
+      }
+
+      /**
+       * 查找用户
+       **/
+      function searchUser() {
+          let user = $("#search_user").val();
+          if (user.length > 0) {
+              $.ajax({
+                  url: "/admin_search",
+                  type: "POST",
+                  dataType: "json",
+                  data: $("#form_search").serialize(),
+                  success: repos => {
+                      if (repos !== null) {
+                          $("#user_list").html(parseUserListData(repos.data));
+                      } else {
+                          $("#search_hint").html("未找到相关用户！");
+                      }
+                  },
+                  error: repos => {
+
+                  }
+              })
+          }
+      }
+
+      /**
+       * 解析数据
+       * @param data
+       * @returns {string}
+       */
+      function parseUserListData(data) {
+          let content = "";
+          for (let i = 0; i < data.length; i++) {
+              content += "<tr>" +
+                      "<td>" + data[i].username + "</td>" +
+                      "<td>" + data[i].nickname + "</td>" +
+                      "<td>" + data[i].university + "</td>" +
+                      "<td>" + data[i].register_time + "</td>" +
+                      "<td>" + data[i].last_login + "</td>" +
+                      "<td class=\"text-danger\"><a href=\"#\">修改</a>/<a href=\"#\">删除</a></td>" +
+                      "</tr>";
+          }
+          return content;
       }
   </script>
   <!-- container-scroller -->
