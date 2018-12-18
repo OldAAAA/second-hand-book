@@ -372,7 +372,11 @@
               type: "POST",
               dataType: "json",
               success: function (result) {
-                  alert("发布成功")
+                  showErrorMessage("发布成功！");
+                  loadAnnoList();
+              },
+              error: repos => {
+                  showErrorMessage("发布失败！");
               }
           });
       }
