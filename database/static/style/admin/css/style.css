@@ -20974,15 +20974,16 @@ my_css
   color: #a898ff;
 }
 
-.operate {
-}
-
-.operate a {
+.operation {
   cursor: pointer;
-  color: #00A8FF;
+  color: #707bff;
 }
 
-.operate a:hover {
-  color: #763cff;
+.operation:hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+  padding-bottom: 3px;
+  color: #1834ff;
 }
+
 

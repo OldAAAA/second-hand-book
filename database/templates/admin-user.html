@@ -368,7 +368,8 @@
 
   <script>
       window.onload = function () {
-          loadUserList()
+          loadUserList();
+          loadLatestLogin();
       };
 
       function checkUserInfo() {
@@ -474,7 +475,7 @@
                   $("#users_latest_login").html(content);
               },
               error: repos => {
-                  showErrorMessage("暂无最近数据！");
+                  showErrorMessage("暂无最新登录信息");
               }
           })
       }
@@ -518,10 +519,14 @@
                       "<td>" + data[i].university + "</td>" +
                       "<td>" + data[i].register_time + "</td>" +
                       "<td>" + data[i].last_login + "</td>" +
-                      "<td class=\"text-danger\"><a href=\"#\">修改</a>/<a href=\"#\">删除</a></td>" +
+                      "<td class=\"text-danger\"><a class=\"operation\" onclick=\"showl()\">修改</a>/<a class=\"operation\">删除</a></td>" +
                       "</tr>";
           }
           return content;
+      }
+
+      function showl() {
+          alert("23")
       }
   </script>
   <!-- container-scroller -->
