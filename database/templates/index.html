@@ -206,6 +206,7 @@
 							<li><a  onclick="getlist(this)">计算机</a></li>
 							<li><a  onclick="getlist(this)">政治</a></li>
 							<li><a  onclick="getlist(this)">机电</a></li>
+                            <li><a  onclick="getlist(this)">经济</a></li>
 							<li><a  onclick="getlist(this)">法律</a></li>
 							<li><a  onclick="getlist(this)">土木</a></li>
 							<li><a  onclick="getlist(this)">生活</a></li>
@@ -382,7 +383,7 @@
                     var html = '';
                     $.each(result, function (index, data) {
                         html +=
-                        '<div class="listitem"><li class="product photography"><a href="goods?goods_id'+data.goods_id+'"><img src='+data.url+' alt="Product" /><h5>'+data.goods_name+'</h5><span class="price">￥'+data.goods_price+'</span></a><div class="wishlist-box"><a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a><a href="=#"><i class="fa fa-heart-o" title="收藏商品"></i></a><a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a></div></li></div>'
+                        '<div class="listitem"><li class="product photography"><a href="goods?goods_id'+data.goods_id+'"><img src='+data.url+' alt="Product" /><h5>'+data.goods_name+'</h5><span class="price">￥'+data.goods_price+'<del>'+ data.goods_price1+'</del></span></a><div class="wishlist-box"><a href="#"><i class="fa fa-cart-plus" title="添加到购物车"></i></a><a href="=#"><i class="fa fa-heart-o" title="收藏商品"></i></a><a href="#"><i class="fa fa-comments-o" title="联系商家"></i></a></div></li></div>'
 
                     });
                     $('#all').html(html);
